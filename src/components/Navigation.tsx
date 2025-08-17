@@ -19,7 +19,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h2 className="font-serif text-2xl font-bold text-consulting-dark">
+            <h2 className="font-brand text-2xl font-bold text-consulting-dark">
               Elevator Consulting
             </h2>
           </div>

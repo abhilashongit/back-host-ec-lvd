@@ -22,6 +22,7 @@ export default {
 				sans: ['AirIndia', 'Inter', 'system-ui', 'sans-serif'],
 				serif: ['Playfair Display', 'Georgia', 'serif'],
 				brand: ['AirIndia Variable', 'AirIndia', 'Inter', 'system-ui', 'sans-serif'],
+				caption: ['Nunito', 'Inter', 'system-ui', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

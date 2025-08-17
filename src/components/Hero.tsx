@@ -18,9 +18,9 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
         <div className="animate-fade-in">
-          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight">
+          <h1 className="font-sans text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight">
             Transform Your
-            <span className="block text-consulting-light">Business Reality</span>
+            <span className="block text-consulting-light font-brand">Business Reality</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed">
@@ -53,7 +53,7 @@ const Hero = () => {
                 <TrendingUp className="h-12 w-12 text-white" />
               </div>
               <div className="text-3xl font-bold text-white mb-2">40%+</div>
-              <div className="text-white/80">Average Revenue Increase</div>
+              <div className="text-white/80 font-caption">Average Revenue Increase</div>
             </div>
             
             <div className="text-center animate-scale-in" style={{ animationDelay: '0.2s' }}>
@@ -61,7 +61,7 @@ const Hero = () => {
                 <Target className="h-12 w-12 text-white" />
               </div>
               <div className="text-3xl font-bold text-white mb-2">85%+</div>
-              <div className="text-white/80">Client Retention Rate</div>
+              <div className="text-white/80 font-caption">Client Retention Rate</div>
             </div>
             
             <div className="text-center animate-scale-in" style={{ animationDelay: '0.4s' }}>
@@ -69,7 +69,7 @@ const Hero = () => {
                 <Users className="h-12 w-12 text-white" />
               </div>
               <div className="text-3xl font-bold text-white mb-2">200+</div>
-              <div className="text-white/80">Successful Transformations</div>
+              <div className="text-white/80 font-caption">Successful Transformations</div>
             </div>
           </div>
         </div>

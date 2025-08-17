@@ -46,7 +46,7 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-consulting-dark mb-6">
+          <h2 className="font-brand text-4xl md:text-5xl font-bold text-consulting-dark mb-6">
             Strategic Solutions That Drive Results
           </h2>
           <p className="text-xl text-consulting-light max-w-3xl mx-auto leading-relaxed">
@@ -67,7 +67,7 @@ const Services = () => {
                 <div className="w-16 h-16 bg-consulting-dark rounded-lg flex items-center justify-center mb-4 group-hover:bg-consulting-medium transition-smooth">
                   <service.icon className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="font-serif text-2xl font-semibold text-consulting-dark mb-4">
+                <h3 className="font-brand text-2xl font-semibold text-consulting-dark mb-4">
                   {service.title}
                 </h3>
               </div>
@@ -77,7 +77,7 @@ const Services = () => {
               </p>
               
               <div className="border-t border-consulting-subtle pt-4">
-                <div className="text-sm font-semibold text-consulting-medium">
+                <div className="text-sm font-semibold text-consulting-medium font-caption">
                   Typical Impact: {service.metrics}
                 </div>
               </div>
@@ -87,7 +87,7 @@ const Services = () => {
 
         {/* CTA Section */}
         <div className="text-center mt-16 animate-fade-in">
-          <h3 className="font-serif text-2xl font-semibold text-consulting-dark mb-4">
+          <h3 className="font-brand text-2xl font-semibold text-consulting-dark mb-4">
             Ready to Transform Your Business?
           </h3>
           <p className="text-consulting-light mb-8 max-w-2xl mx-auto">
