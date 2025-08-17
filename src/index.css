@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+/* AirIndia Custom Fonts */
+@font-face {
+  font-family: 'AirIndia';
+  src: url('/fonts/AirIndia/airindia-regular-webfont.woff2') format('woff2'),
+       url('/fonts/AirIndia/AirIndia-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AirIndia Variable';
+  src: url('/fonts/AirIndia/AirIndiaVariable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
