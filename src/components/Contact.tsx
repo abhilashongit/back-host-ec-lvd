@@ -160,7 +160,7 @@ const Contact = () => {
     to discuss your specific business challenges.
   </p>
   <a 
-    href="PLACE_LINK_HERE" // <-- Replace with your actual Calendly link later
+    href="PLACE_LINK_HERE" // <-- place calendly link here on priority basis 
     target="_blank"
     rel="noopener noreferrer"
   >
