@@ -10,7 +10,7 @@ const Contact = () => {
       icon: Mail,
       title: "Email",
       content: "strategy@elevatorconsulting.com",
-      description: "Direct access to our strategy team"
+      description: "Direct access to \n our strategy team"
     },
     {
       icon: Phone,
@@ -28,7 +28,7 @@ const Contact = () => {
       icon: Clock,
       title: "Response Time",
       content: "< 12 hours",
-      description: "We're here for you."
+      description: "We're here for you, \n through thick and thin"
     }
   ];
 
