@@ -151,25 +151,30 @@ const Contact = () => {
             </div>
 
             {/* Additional CTA */}
-           <Card className="p-8 bg-gradient-hero text-center">
-  <h4 className="font-serif text-xl font-semibold text-white mb-4">
-    Prefer to Talk Directly?
-  </h4>
-  <p className="text-white/90 mb-6">
-    Schedule a 30-minute discovery call with one of our senior consultants 
-    to discuss your specific business challenges.
-  </p>
-  <a 
-    href="PLACE_LINK_HERE" // <-- Replace with your actual Calendly link later
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <Button 
-      variant="outline"
-      className="border-white text-white hover:bg-white/10 px-6 py-3 font-semibold"
+          
+const DiscoveryCard = () => (
+  <Card className="p-8 bg-gradient-hero text-center">
+    <h4 className="font-serif text-xl font-semibold text-white mb-4">
+      Prefer to Talk Directly?
+    </h4>
+    <p className="text-white/90 mb-6">
+      Schedule a 30-minute discovery call with one of our senior consultants 
+      to discuss your specific business challenges.
+    </p>
+    <a 
+      href="https://www.calendly.com" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      style={{ textDecoration: 'none' }}
     >
-      Book Discovery Call
-    </Button>
-  </a>
-</Card>
-export default Contact;
+      <Button 
+        variant="outline"
+        className="border-white text-white hover:bg-white/10 px-6 py-3 font-semibold"
+      >
+        Book Discovery Call
+      </Button>
+    </a>
+  </Card>
+);
+
+export default DiscoveryCard;
