@@ -15,20 +15,20 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      content: "+1 (555) 123-4567",
-      description: "Business hours consultation line"
+      content: "+91 77091 17839",
+      description: "Speak with our strategists directly, \n no support agents in the middle!"
     },
     {
       icon: MapPin,
       title: "Headquarters",
-      content: "New York, NY",
-      description: "Global reach, local expertise"
+      content: "Pune, MH",
+      description: "Situated in the nest of growing startups"
     },
     {
       icon: Clock,
       title: "Response Time",
-      content: "< 24 hours",
-      description: "Guaranteed initial response"
+      content: "< 12 hours",
+      description: "We're here for you."
     }
   ];
 
