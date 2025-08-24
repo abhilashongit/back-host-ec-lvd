@@ -95,7 +95,7 @@ const Methodology = () => {
           ))}
         </div>
 
-    {/* Bottom CTA */}
+ {/* Bottom CTA */}
 <div className="text-center mt-16 animate-fade-in">
   <div className="bg-gradient-hero rounded-2xl p-12 text-center">
     <h3 className="font-sans text-3xl font-semibold text-white mb-4">
@@ -105,10 +105,13 @@ const Methodology = () => {
       Schedule a complimentary strategy session to see how our proven approach 
       can transform your business challenges into competitive advantages.
     </p>
-    <a href="https://calendly.com/abhilash-kar-2024-sse/strategy-discovery" target="_blank" rel="noopener noreferrer">
-      <button className="bg-white text-consulting-dark hover:bg-white/90 px-8 py-4 rounded-lg font-semibold transition-smooth shadow-premium">
-        Book Strategy Session
-      </button>
+    <a 
+      href="https://calendly.com/abhilash-kar-2024-sse/strategy-discovery" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="bg-white text-consulting-dark hover:bg-white/90 px-8 py-4 rounded-lg font-semibold transition-smooth shadow-premium inline-block"
+    >
+      Book Strategy Session
     </a>
   </div>
 </div>
