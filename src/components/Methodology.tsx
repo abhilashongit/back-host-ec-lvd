@@ -38,7 +38,7 @@ const Methodology = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-consulting-dark mb-6">
+          <h2 className="font-sans text-4xl md:text-5xl font-bold text-consulting-dark mb-6">
             Our Proven Methodology
           </h2>
           <p className="text-xl text-consulting-light max-w-3xl mx-auto leading-relaxed">
@@ -58,7 +58,7 @@ const Methodology = () => {
               <div className="flex flex-col lg:flex-row items-start gap-8">
                 {/* Phase Number & Icon */}
                 <div className="flex-shrink-0 flex items-center gap-6">
-                  <div className="text-6xl font-bold text-consulting-subtle font-serif">
+                  <div className="text-6xl font-bold text-consulting-subtle font-sans">
                     {phase.number}
                   </div>
                   <div className="w-16 h-16 bg-consulting-dark rounded-lg flex items-center justify-center">
@@ -68,7 +68,7 @@ const Methodology = () => {
 
                 {/* Content */}
                 <div className="flex-1">
-                  <h3 className="font-serif text-2xl md:text-3xl font-semibold text-consulting-dark mb-4">
+                  <h3 className="font-sans text-2xl md:text-3xl font-semibold text-consulting-dark mb-4">
                     {phase.title}
                   </h3>
                   <p className="text-lg text-consulting-light mb-6 leading-relaxed">
@@ -98,7 +98,7 @@ const Methodology = () => {
         {/* Bottom CTA */}
         <div className="text-center mt-16 animate-fade-in">
           <div className="bg-gradient-hero rounded-2xl p-12 text-center">
-            <h3 className="font-serif text-3xl font-semibold text-white mb-4">
+            <h3 className="font-sans text-3xl font-semibold text-white mb-4">
               Experience Our Methodology in Action
             </h3>
             <p className="text-white/90 mb-8 max-w-2xl mx-auto text-lg">
