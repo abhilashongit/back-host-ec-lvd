@@ -1,4 +1,4 @@
-import { Card } from "@/components/ui/card";
+eimport { Card } from "@/components/ui/card";
 import { Search, Lightbulb, Cog, BarChart } from "lucide-react";
 
 const Methodology = () => {
@@ -95,7 +95,7 @@ const Methodology = () => {
           ))}
         </div>
 
-       {/* Bottom CTA */}
+    {/* Bottom CTA */}
 <div className="text-center mt-16 animate-fade-in">
   <div className="bg-gradient-hero rounded-2xl p-12 text-center">
     <h3 className="font-sans text-3xl font-semibold text-white mb-4">
