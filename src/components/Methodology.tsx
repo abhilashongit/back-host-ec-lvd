@@ -49,50 +49,56 @@ const Methodology = () => {
 
         {/* Methodology Steps */}
         <div className="space-y-8">
-          {phases.map((phase, index) => (
-            <Card
-              key={phase.number}
-              className="p-8 bg-gradient-card border-consulting-subtle hover:shadow-card transition-smooth animate-slide-in"
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
-              <div className="flex flex-col lg:flex-row items-start gap-8">
-                {/* Phase Number & Icon */}
-                <div className="flex-shrink-0 flex items-center gap-6">
-                  <div className="text-6xl font-bold text-consulting-subtle font-sans">
-                    {phase.number}
-                  </div>
-                  <div className="w-16 h-16 bg-consulting-dark rounded-lg flex items-center justify-center">
-                    <phase.icon className="h-8 w-8 text-white" />
-                  </div>
-                </div>
+          {phases.map((phase, index) => {
+            // FIX: Assign the component to a capitalized variable
+            const IconComponent = phase.icon; 
 
-                {/* Content */}
-                <div className="flex-1">
-                  <h3 className="font-sans text-2xl md:text-3xl font-semibold text-consulting-dark mb-4">
-                    {phase.title}
-                  </h3>
-                  <p className="text-lg text-consulting-light mb-6 leading-relaxed">
-                    {phase.description}
-                  </p>
+            return (
+              <Card
+                key={phase.number}
+                className="p-8 bg-gradient-card border-consulting-subtle hover:shadow-card transition-smooth animate-slide-in"
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
+                <div className="flex flex-col lg:flex-row items-start gap-8">
+                  {/* Phase Number & Icon */}
+                  <div className="flex-shrink-0 flex items-center gap-6">
+                    <div className="text-6xl font-bold text-consulting-subtle font-sans">
+                      {phase.number}
+                    </div>
+                    <div className="w-16 h-16 bg-consulting-dark rounded-lg flex items-center justify-center">
+                      {/* FIX: Use the capitalized variable here */}
+                      <IconComponent className="h-8 w-8 text-white" />
+                    </div>
+                  </div>
 
-                  {/* Deliverables */}
-                  <div>
-                    <h4 className="font-semibold text-consulting-medium mb-3">Key Deliverables:</h4>
-                    <div className="flex flex-wrap gap-3">
-                      {phase.deliverables.map((deliverable) => (
-                        <span
-                          key={deliverable}
-                          className="px-4 py-2 bg-consulting-subtle text-consulting-dark text-sm font-medium rounded-lg"
-                        >
-                          {deliverable}
-                        </span>
-                      ))}
+                  {/* Content */}
+                  <div className="flex-1">
+                    <h3 className="font-sans text-2xl md:text-3xl font-semibold text-consulting-dark mb-4">
+                      {phase.title}
+                    </h3>
+                    <p className="text-lg text-consulting-light mb-6 leading-relaxed">
+                      {phase.description}
+                    </p>
+
+                    {/* Deliverables */}
+                    <div>
+                      <h4 className="font-semibold text-consulting-medium mb-3">Key Deliverables:</h4>
+                      <div className="flex flex-wrap gap-3">
+                        {phase.deliverables.map((deliverable) => (
+                          <span
+                            key={deliverable}
+                            className="px-4 py-2 bg-consulting-subtle text-consulting-dark text-sm font-medium rounded-lg"
+                          >
+                            {deliverable}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </Card>
-          ))}
+              </Card>
+            );
+          })}
         </div>
 
         {/* Bottom CTA */}
