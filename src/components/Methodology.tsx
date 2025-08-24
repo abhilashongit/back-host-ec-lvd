@@ -1,4 +1,4 @@
-eimport { Card } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Search, Lightbulb, Cog, BarChart } from "lucide-react";
 
 const Methodology = () => {
@@ -42,7 +42,7 @@ const Methodology = () => {
             Our Proven Methodology
           </h2>
           <p className="text-xl text-consulting-light max-w-3xl mx-auto leading-relaxed">
-            A systematic approach to business transformation that combines analytical rigor 
+            A systematic approach to business transformation that combines analytical rigor
             with practical execution expertise, ensuring sustainable results.
           </p>
         </div>
@@ -50,7 +50,7 @@ const Methodology = () => {
         {/* Methodology Steps */}
         <div className="space-y-8">
           {phases.map((phase, index) => (
-            <Card 
+            <Card
               key={phase.number}
               className="p-8 bg-gradient-card border-consulting-subtle hover:shadow-card transition-smooth animate-slide-in"
               style={{ animationDelay: `${index * 0.2}s` }}
@@ -74,13 +74,13 @@ const Methodology = () => {
                   <p className="text-lg text-consulting-light mb-6 leading-relaxed">
                     {phase.description}
                   </p>
-                  
+
                   {/* Deliverables */}
                   <div>
                     <h4 className="font-semibold text-consulting-medium mb-3">Key Deliverables:</h4>
                     <div className="flex flex-wrap gap-3">
                       {phase.deliverables.map((deliverable) => (
-                        <span 
+                        <span
                           key={deliverable}
                           className="px-4 py-2 bg-consulting-subtle text-consulting-dark text-sm font-medium rounded-lg"
                         >
@@ -95,25 +95,29 @@ const Methodology = () => {
           ))}
         </div>
 
-{/* Bottom CTA */}
-<div className="text-center mt-16 animate-fade-in">
-  <div className="bg-gradient-hero rounded-2xl p-12 text-center">
-    <h3 className="font-sans text-3xl font-semibold text-white mb-4">
-      Experience Our Methodology in Action
-    </h3>
-    <p className="text-white/90 mb-8 max-w-2xl mx-auto text-lg">
-      Schedule a complimentary strategy session to see how our proven approach 
-      can transform your business challenges into competitive advantages.
-    </p>
-    <a 
-      href="https://calendly.com/abhilash-kar-2024-sse/strategy-discovery" 
-      target="_blank" 
-      rel="noopener noreferrer"
-      className="bg-white text-consulting-dark hover:bg-white/90 px-8 py-4 rounded-lg font-semibold transition-smooth shadow-premium inline-block"
-    >
-      Book Strategy Session
-    </a>
-  </div>
-</div>
+        {/* Bottom CTA */}
+        <div className="text-center mt-16 animate-fade-in">
+          <div className="bg-gradient-hero rounded-2xl p-12 text-center">
+            <h3 className="font-sans text-3xl font-semibold text-white mb-4">
+              Experience Our Methodology in Action
+            </h3>
+            <p className="text-white/90 mb-8 max-w-2xl mx-auto text-lg">
+              Schedule a complimentary strategy session to see how our proven approach
+              can transform your business challenges into competitive advantages.
+            </p>
+            <a
+              href="https://calendly.com/abhilash-kar-2024-sse/strategy-discovery"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-consulting-dark hover:bg-white/90 px-8 py-4 rounded-lg font-semibold transition-smooth shadow-premium inline-block"
+            >
+              Book Strategy Session
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default Methodology;
