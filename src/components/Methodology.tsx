@@ -7,21 +7,21 @@ const Methodology = () => {
       number: "01",
       icon: Search,
       title: "Discovery & Analysis",
-      description: "Comprehensive business assessment leveraging data analytics and stakeholder insights to identify transformation opportunities.",
+      description: "Using data insights to assess the current state of your business and identify potential optimisation points for performance enhnancement",
       deliverables: ["Current State Analysis", "Performance Benchmarking", "Opportunity Mapping"]
     },
     {
       number: "02",
       icon: Lightbulb,
       title: "Strategy Development",
-      description: "Collaborative strategy formulation that aligns with business objectives and creates actionable roadmaps for sustainable growth.",
+      description: " We work with you to imagine the goal ahead, and implement actionable goals to realize it",
       deliverables: ["Strategic Framework", "Implementation Roadmap", "Success Metrics"]
     },
     {
       number: "03",
       icon: Cog,
       title: "Implementation Excellence",
-      description: "Hands-on execution support ensuring seamless transformation while building internal capabilities for long-term success.",
+      description: "Hands-on execution support ensuring seamless transformation whilST building internally for long-term success",
       deliverables: ["Change Management", "Process Optimization", "Team Enablement"]
     },
     {
