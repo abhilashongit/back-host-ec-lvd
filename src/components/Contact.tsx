@@ -48,7 +48,7 @@ const Contact = () => {
       icon: MapPin,
       title: "Headquarters",
       content: "Pune, MH",
-      description: "Situated in the nest of growing startups"
+      description: "Nestled in the midst \n of fast-paced startups"
     },
     {
       icon: Clock,
@@ -64,11 +64,11 @@ const Contact = () => {
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-consulting-dark mb-6">
-            Start Your Transformation Journey
+            Begin the change <b>today</b>
           </h2>
           <p className="text-xl text-consulting-light max-w-3xl mx-auto leading-relaxed">
-            Ready to unlock your company's full potential? Connect with our strategy experts 
-            to discuss how we can drive transformational results for your business.
+            Let's maximise your potential? Connect with our strategy experts 
+            to discuss how we bring the 'elevate' to your campaign.
           </p>
         </div>
 
