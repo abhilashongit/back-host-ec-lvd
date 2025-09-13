@@ -142,4 +142,18 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Glitter animation for buttons */
+  @keyframes glitter {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .animate-glitter {
+    animation: glitter 0.6s ease-in-out;
+  }
 }
