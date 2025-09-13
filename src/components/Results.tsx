@@ -4,12 +4,12 @@ import { Quote, ArrowUpRight, Building2, TrendingUp } from "lucide-react";
 const Results = () => {
   const testimonials = [
     {
-      company: "TechScale Solutions",
-      industry: "B2B SaaS",
-      result: "185% revenue growth in 18 months",
-      quote: "Elevator Consulting transformed our go-to-market strategy. Their data-driven approach helped us identify untapped market segments and optimize our sales funnel, resulting in unprecedented growth.",
-      executive: "Sarah Chen",
-      title: "CEO & Founder"
+      company: "Scenario Seven Media",
+      industry: "B2B/D2C Hybrid Product Brand",
+      result: "0 to six-figure revenue in months with ZERO fixed cost",
+      quote: "Elevator Consulting transformed our go-to-market strategy. Their holistic, evidence-backed approach helped us identify untapped market segments and optimize our sales funnel, resulting in incredible growth, all while keeping costs in check.",
+      executive: "Rohan Marathe",
+      title: "Founder & CEO"
     },
     {
       company: "Manufacturing Plus",
