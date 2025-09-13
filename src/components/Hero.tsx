@@ -26,7 +26,7 @@ const Hero = () => {
             A strategy is only as strong as its execution. We specialize in developing future-proof success paths that align with your team and bridge the critical gap between your vision and tangible results.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+          <div className="flex justify-center mb-16">
             <Button 
               size="lg" 
               className="bg-white text-consulting-dark hover:bg-white/90 px-8 py-4 text-lg font-semibold transition-smooth shadow-premium"
@@ -38,41 +38,13 @@ const Hero = () => {
               <Lightbulb className="mr-2 h-5 w-5" />
               Schedule Strategic Consultation
             </Button>
-            
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-white text-white hover:bg-white/10 px-8 py-4 text-lg font-semibold transition-smooth"
-            >
-              Our working process 
-            </Button>
           </div>
           
-          {/* Key Metrics */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center animate-scale-in">
-              <div className="flex items-center justify-center mb-4">
-                <TrendingUp className="h-12 w-12 text-white" />
-              </div>
-              <div className="text-3xl font-bold text-white mb-2">40%+</div>
-              <div className="text-white/80 font-caption">Average Revenue Increase</div>
-            </div>
-            
-            <div className="text-center animate-scale-in" style={{ animationDelay: '0.2s' }}>
-              <div className="flex items-center justify-center mb-4">
-                <Target className="h-12 w-12 text-white" />
-              </div>
-              <div className="text-3xl font-bold text-white mb-2">85%+</div>
-              <div className="text-white/80 font-caption">Client Retention Rate</div>
-            </div>
-            
-            <div className="text-center animate-scale-in" style={{ animationDelay: '0.4s' }}>
-              <div className="flex items-center justify-center mb-4">
-                <Users className="h-12 w-12 text-white" />
-              </div>
-              <div className="text-3xl font-bold text-white mb-2">200+</div>
-              <div className="text-white/80 font-caption">Successful Transformations</div>
-            </div>
+          {/* What sets us apart */}
+          <div className="mt-20">
+            <h2 className="font-brand text-4xl md:text-5xl font-bold text-white text-center">
+              What sets us apart?
+            </h2>
           </div>
         </div>
       </div>

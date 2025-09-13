@@ -8,10 +8,10 @@ const Footer = () => {
     <footer className="bg-gradient-hero text-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
-        <div className="text-center mb-12">
-          <h3 className="font-serif text-2xl font-bold mb-4">
-            Elevator Consulting
-          </h3>
+          <div className="text-center mb-12">
+            <h3 className="font-brand text-2xl font-bold mb-4">
+              Elevator Consulting
+            </h3>
           <p className="text-white/80 mb-8 leading-relaxed max-w-2xl mx-auto">
             Transforming ambitious B2B companies through strategic consulting excellence. 
             We partner with high-growth organizations to accelerate revenue, optimize operations, 
@@ -19,17 +19,7 @@ const Footer = () => {
           </p>
           
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              variant="outline"
-              className="border-white text-white hover:bg-white/10 px-6 py-3 font-semibold"
-              onClick={() => {
-                const contactSection = document.getElementById('contact');
-                contactSection?.scrollIntoView({ behavior: 'smooth' });
-              }}
-            >
-              Contact Us
-            </Button>
+          <div className="flex justify-center">
             <a 
               href="https://calendly.com/abhilash-kar-2024-sse/strategy-discovery" 
               target="_blank" 
@@ -65,6 +55,16 @@ const Footer = () => {
           
           {/* Legal Links */}
           <div className="flex items-center gap-6 text-sm">
+            <a 
+              href="#" 
+              className="text-white/70 hover:text-white transition-smooth"
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                contactSection?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              Contact Us
+            </a>
             <a href="#" className="text-white/70 hover:text-white transition-smooth">
               Privacy Policy
             </a>

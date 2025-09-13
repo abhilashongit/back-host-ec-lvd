@@ -22,7 +22,7 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-consulting-dark mb-6">
+          <h2 className="font-caption text-4xl md:text-5xl font-bold text-consulting-dark mb-6">
             Begin the change <b>today</b>
           </h2>
           <p className="text-xl text-consulting-light max-w-3xl mx-auto leading-relaxed">
