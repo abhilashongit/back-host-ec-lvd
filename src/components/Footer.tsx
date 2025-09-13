@@ -1,103 +1,47 @@
 import { Separator } from "@/components/ui/separator";
-import { Mail, Phone, Linkedin, Twitter } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Linkedin, Twitter } from "lucide-react";
 
 const Footer = () => {
-  const footerLinks = {
-    services: [
-      "Revenue Acceleration",
-      "Sales Optimization", 
-      "Operational Excellence",
-      "Culture Development",
-      "Product Launch Strategy",
-      "Brand & Marketing"
-    ],
-    company: [
-      "About Us",
-      "Our Methodology", 
-      "Case Studies",
-      "Leadership Team",
-      "Careers",
-      "Contact"
-    ],
-    resources: [
-      "Strategy Insights",
-      "Industry Reports",
-      "Best Practices",
-      "Webinars",
-      "Assessment Tools",
-      "ROI Calculator"
-    ]
-  };
 
   return (
     <footer className="bg-gradient-hero text-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
-          {/* Company Info */}
-          <div className="lg:col-span-2">
-            <h3 className="font-serif text-2xl font-bold mb-4">
-              Elevator Consulting
-            </h3>
-            <p className="text-white/80 mb-6 leading-relaxed">
-              Transforming ambitious B2B companies through strategic consulting excellence. 
-              We partner with high-growth organizations to accelerate revenue, optimize operations, 
-              and build sustainable competitive advantages.
-            </p>
-            
-            {/* Contact Info */}
-            <div className="space-y-3">
-              <div className="flex items-center gap-3">
-                <Mail className="h-5 w-5 text-white/70" />
-                <span className="text-white/90">strategy@elevatorconsulting.com</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Phone className="h-5 w-5 text-white/70" />
-                <span className="text-white/90">+1 (555) 123-4567</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h4 className="font-semibold text-white mb-4">Services</h4>
-            <ul className="space-y-2">
-              {footerLinks.services.map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-white/70 hover:text-white transition-smooth text-sm">
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h4 className="font-semibold text-white mb-4">Company</h4>
-            <ul className="space-y-2">
-              {footerLinks.company.map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-white/70 hover:text-white transition-smooth text-sm">
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h4 className="font-semibold text-white mb-4">Resources</h4>
-            <ul className="space-y-2">
-              {footerLinks.resources.map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-white/70 hover:text-white transition-smooth text-sm">
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
+        <div className="text-center mb-12">
+          <h3 className="font-serif text-2xl font-bold mb-4">
+            Elevator Consulting
+          </h3>
+          <p className="text-white/80 mb-8 leading-relaxed max-w-2xl mx-auto">
+            Transforming ambitious B2B companies through strategic consulting excellence. 
+            We partner with high-growth organizations to accelerate revenue, optimize operations, 
+            and build sustainable competitive advantages.
+          </p>
+          
+          {/* Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button 
+              variant="outline"
+              className="border-white text-white hover:bg-white/10 px-6 py-3 font-semibold"
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                contactSection?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              Contact Us
+            </Button>
+            <a 
+              href="https://calendly.com/abhilash-kar-2024-sse/strategy-discovery" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{ textDecoration: 'none' }}
+            >
+              <Button 
+                className="bg-white text-consulting-dark hover:bg-white/90 px-6 py-3 font-semibold"
+              >
+                Schedule a Session
+              </Button>
+            </a>
           </div>
         </div>
 
