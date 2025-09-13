@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { Lightbulb, TrendingUp, Target, Users } from "lucide-react";
+import { HelpCircle, TrendingUp, Target, Users } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -26,7 +26,7 @@ const Hero = () => {
             A strategy is only as strong as its execution. We specialize in developing future-proof success paths that align with your team and bridge the critical gap between your vision and tangible results.
           </p>
           
-          <div className="flex justify-center mb-16">
+          <div className="flex justify-center mb-8">
             <Button 
               size="lg" 
               className="bg-white text-consulting-dark hover:bg-white/90 px-8 py-4 text-lg font-semibold transition-smooth shadow-premium"
@@ -35,8 +35,8 @@ const Hero = () => {
                 methodologySection?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              <Lightbulb className="mr-2 h-5 w-5" />
-              Schedule Strategic Consultation
+              <HelpCircle className="mr-2 h-5 w-5" />
+              How do you do this?
             </Button>
           </div>
         </div>
