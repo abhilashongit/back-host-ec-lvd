@@ -85,19 +85,6 @@ const Services = () => {
           ))}
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center mt-16 animate-fade-in">
-          <h3 className="font-brand text-2xl font-semibold text-consulting-dark mb-4">
-            Ready to Transform Your Business?
-          </h3>
-          <p className="text-consulting-light mb-8 max-w-2xl mx-auto">
-            Discover how our strategic consulting services can accelerate your company's growth 
-            and operational excellence.
-          </p>
-          <button className="bg-consulting-dark hover:bg-consulting-medium text-white px-8 py-4 rounded-lg font-semibold transition-smooth shadow-card">
-            Schedule Your Strategy Session
-          </button>
-        </div>
       </div>
     </section>
   );
