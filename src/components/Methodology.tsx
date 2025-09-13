@@ -39,7 +39,7 @@ const Methodology = () => {
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="font-sans text-4xl md:text-5xl font-bold text-consulting-dark mb-6">
-            Our Proven Methodology
+            The First Step Is Clarity.
           </h2>
           <p className="text-xl text-consulting-light max-w-3xl mx-auto leading-relaxed">
             A systematic approach to business transformation that combines analytical rigor

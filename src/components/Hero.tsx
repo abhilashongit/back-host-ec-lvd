@@ -39,6 +39,10 @@ const Hero = () => {
               Schedule Strategic Consultation
             </Button>
           </div>
-          
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default Hero;
