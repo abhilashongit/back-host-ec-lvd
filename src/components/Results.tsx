@@ -5,7 +5,7 @@ const Results = () => {
   const testimonials = [
     {
       company: "Scenario Seven Media",
-      industry: "B2B/D2C Hybrid Product Brand",
+      industry: "B2B Product Brand",
       result: "0 to six-figure revenue in months with ZERO fixed cost",
       quote: "Elevator Consulting transformed our go-to-market strategy. Their holistic, evidence-backed approach helped us identify untapped market segments and optimize our sales funnel, resulting in incredible growth, all while keeping costs in check.",
       executive: "Rohan Marathe",
