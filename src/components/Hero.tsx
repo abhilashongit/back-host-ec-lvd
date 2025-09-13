@@ -40,16 +40,5 @@ const Hero = () => {
             </Button>
           </div>
           
-          {/* What sets us apart */}
-          <div className="mt-20">
-            <h2 className="font-brand text-4xl md:text-5xl font-bold text-white text-center">
-              What sets us apart?
-            </h2>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
 
 export default Hero;
