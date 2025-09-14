@@ -26,8 +26,8 @@ const Contact = () => {
             Begin the change <b>today</b>
           </h2>
           <p className="text-xl text-consulting-light max-w-3xl mx-auto leading-relaxed">
-            The toughest part is to start, and the earlier you do - the better. <br>  Connect with our strategy experts 
-            to discuss how we bring the 'elevate' to your campaign.</br>
+            The toughest part is to start, and the earlier you do - the better. <br />  Connect with our strategy experts 
+            to discuss how we bring the 'elevate' to your campaign.
           </p>
         </div>
 
