@@ -45,39 +45,39 @@ const Services = () => {
     <section id="services" className="py-16 sm:py-20 lg:py-24 bg-gradient-subtle">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-12 sm:mb-16 animate-elegant-fade-up">
-          <h2 className="font-brand text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-consulting-dark mb-4 sm:mb-6 animate-soft-glow text-shadow-soft">
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20 animate-elegant-fade-up">
+          <h2 className="font-brand text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-consulting-dark mb-6 sm:mb-8 animate-soft-glow text-shadow-soft px-2">
             Strategic Solutions That Drive Results
           </h2>
-          <p className="text-lg sm:text-xl lg:text-2xl text-consulting-light max-w-3xl mx-auto leading-relaxed animate-elegant-fade-up animate-delay-200">
+          <p className="text-xl sm:text-2xl lg:text-2xl text-consulting-light max-w-4xl mx-auto leading-relaxed animate-elegant-fade-up animate-delay-200 px-4">
             Our comprehensive suite of consulting services transforms business challenges into 
             sustainable competitive advantages through proven methodologies and expert execution.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
           {services.map((service, index) => (
             <Card 
               key={service.title}
-              className="p-6 sm:p-8 bg-gradient-card border-consulting-subtle hover:shadow-premium transition-all duration-500 group animate-premium-scale hover:scale-105"
+              className="p-6 sm:p-8 lg:p-10 bg-gradient-card border-consulting-subtle hover:shadow-premium transition-all duration-500 group animate-premium-scale hover:scale-105"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="mb-6">
-                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-consulting-dark rounded-xl flex items-center justify-center mb-4 group-hover:bg-consulting-medium transition-all duration-500 group-hover:shadow-lg animate-gentle-slide-in">
-                  <service.icon className="h-7 w-7 sm:h-8 sm:w-8 text-white" />
+              <div className="mb-6 sm:mb-8">
+                <div className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 bg-consulting-dark rounded-xl flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-consulting-medium transition-all duration-500 group-hover:shadow-lg animate-gentle-slide-in">
+                  <service.icon className="h-8 w-8 sm:h-9 sm:w-9 lg:h-10 lg:w-10 text-white" />
                 </div>
-                <h3 className="font-brand text-xl sm:text-2xl font-semibold text-consulting-dark mb-4 hover-glow animate-elegant-fade-up animate-delay-100">
+                <h3 className="font-brand text-xl sm:text-2xl lg:text-3xl font-semibold text-consulting-dark mb-4 hover-glow animate-elegant-fade-up animate-delay-100 leading-tight">
                   {service.title}
                 </h3>
               </div>
               
-              <p className="text-consulting-light mb-6 leading-relaxed text-sm sm:text-base animate-elegant-fade-up animate-delay-200">
+              <p className="text-consulting-light mb-6 sm:mb-8 leading-relaxed text-base sm:text-lg animate-elegant-fade-up animate-delay-200">
                 {service.description}
               </p>
               
-              <div className="border-t border-consulting-subtle pt-4 animate-elegant-fade-up animate-delay-300">
-                <div className="text-xs sm:text-sm font-semibold text-consulting-medium font-caption">
+              <div className="border-t border-consulting-subtle pt-4 sm:pt-6 animate-elegant-fade-up animate-delay-300">
+                <div className="text-sm sm:text-base font-semibold text-consulting-medium font-caption">
                   Typical Impact: {service.metrics}
                 </div>
               </div>

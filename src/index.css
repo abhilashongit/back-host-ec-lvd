@@ -143,9 +143,27 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 
+  /* Mobile-first optimizations */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
   /* Smooth scrolling for the entire page */
   html {
     scroll-behavior: smooth;
+  }
+
+  /* Better touch targets for mobile */
+  button, a, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Improved text rendering */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   /* Premium text animations with soft touches */
@@ -256,6 +274,18 @@ All colors MUST be HSL.
   @media (min-width: 768px) {
     .text-shadow-soft {
       text-shadow: 0 4px 8px hsla(0 0% 0% / 0.1);
+    }
+  }
+
+  /* Mobile viewport fixes */
+  @media (max-width: 640px) {
+    html, body {
+      overflow-x: hidden;
+    }
+    
+    /* Prevent zoom on input focus */
+    input, textarea, select {
+      font-size: 16px !important;
     }
   }
 }

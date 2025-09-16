@@ -6,20 +6,20 @@ const Footer = () => {
 
   return (
     <footer className="bg-gradient-hero text-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
         {/* Main Footer Content */}
-          <div className="text-center mb-12">
-            <h3 className="font-brand text-2xl font-bold mb-4">
+          <div className="text-center mb-8 sm:mb-12 lg:mb-16 animate-elegant-fade-up">
+            <h3 className="font-brand text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 animate-soft-glow">
               Elevator Consulting
             </h3>
-          <p className="text-white/80 mb-8 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-white/90 mb-6 sm:mb-8 leading-relaxed max-w-3xl mx-auto text-base sm:text-lg lg:text-xl px-4 animate-elegant-fade-up animate-delay-200">
             Transforming ambitious B2B companies through strategic consulting excellence. 
             We partner with high-growth organizations to accelerate revenue, optimize operations, 
             and build sustainable competitive advantages.
           </p>
           
           {/* Action Buttons */}
-          <div className="flex justify-center">
+          <div className="flex justify-center animate-elegant-fade-up animate-delay-300">
             <a 
               href="https://calendly.com/abhilash-kar-2024-sse/strategy-discovery" 
               target="_blank" 
@@ -27,7 +27,7 @@ const Footer = () => {
               style={{ textDecoration: 'none' }}
             >
               <Button 
-                className="bg-white text-consulting-dark hover:bg-white/90 px-6 py-3 font-semibold"
+                className="bg-white text-consulting-dark hover:bg-white/95 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-500 hover:scale-105 hover:shadow-xl min-h-[50px] sm:min-h-[60px] rounded-xl"
               >
                 Schedule a Session
               </Button>
@@ -35,29 +35,29 @@ const Footer = () => {
           </div>
         </div>
 
-        <Separator className="bg-white/20 mb-8" />
+        <Separator className="bg-white/20 mb-6 sm:mb-8" />
 
         {/* Bottom Footer */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-white/70 text-sm">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 sm:gap-8">
+          <div className="text-white/80 text-sm sm:text-base order-3 md:order-1">
             © 2024 Elevator Consulting. All rights reserved.
           </div>
           
           {/* Social Links */}
-          <div className="flex items-center gap-4">
-            <a href="#" className="text-white/70 hover:text-white transition-smooth">
-              <Linkedin className="h-5 w-5" />
+          <div className="flex items-center gap-4 sm:gap-6 order-1 md:order-2">
+            <a href="#" className="text-white/80 hover:text-white transition-all duration-300 hover:scale-110">
+              <Linkedin className="h-6 w-6 sm:h-7 sm:w-7" />
             </a>
-            <a href="#" className="text-white/70 hover:text-white transition-smooth">
-              <Twitter className="h-5 w-5" />
+            <a href="#" className="text-white/80 hover:text-white transition-all duration-300 hover:scale-110">
+              <Twitter className="h-6 w-6 sm:h-7 sm:w-7" />
             </a>
           </div>
           
           {/* Legal Links */}
-          <div className="flex items-center gap-6 text-sm">
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-sm sm:text-base order-2 md:order-3">
             <a 
               href="#" 
-              className="text-white/70 hover:text-white transition-smooth"
+              className="text-white/80 hover:text-white transition-all duration-300 hover:scale-105"
               onClick={() => {
                 const contactSection = document.getElementById('contact');
                 contactSection?.scrollIntoView({ behavior: 'smooth' });
@@ -65,10 +65,10 @@ const Footer = () => {
             >
               Contact Us
             </a>
-            <a href="#" className="text-white/70 hover:text-white transition-smooth">
+            <a href="#" className="text-white/80 hover:text-white transition-all duration-300 hover:scale-105">
               Privacy Policy
             </a>
-            <a href="#" className="text-white/70 hover:text-white transition-smooth">
+            <a href="#" className="text-white/80 hover:text-white transition-all duration-300 hover:scale-105">
               Terms of Service
             </a>
           </div>

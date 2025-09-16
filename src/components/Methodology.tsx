@@ -37,11 +37,11 @@ const Methodology = () => {
     <section id="methodology" className="py-16 sm:py-20 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-12 sm:mb-16 animate-elegant-fade-up">
-          <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-consulting-dark mb-4 sm:mb-6 animate-soft-glow text-shadow-soft">
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20 animate-elegant-fade-up">
+          <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-consulting-dark mb-6 sm:mb-8 animate-soft-glow text-shadow-soft px-2">
             The First Step Is Clarity.
           </h2>
-          <p className="text-lg sm:text-xl lg:text-2xl text-consulting-light max-w-3xl mx-auto leading-relaxed animate-elegant-fade-up animate-delay-200">
+          <p className="text-xl sm:text-2xl lg:text-2xl text-consulting-light max-w-4xl mx-auto leading-relaxed animate-elegant-fade-up animate-delay-200 px-4">
             A systematic approach to business transformation that combines analytical rigor
             with practical execution expertise, ensuring sustainable results.
           </p>
@@ -73,21 +73,21 @@ const Methodology = () => {
 
                   {/* Content */}
                   <div className="flex-1">
-                    <h3 className="font-sans text-xl sm:text-2xl md:text-3xl font-semibold text-consulting-dark mb-4 hover-glow animate-elegant-fade-up animate-delay-100">
+                    <h3 className="font-sans text-2xl sm:text-3xl md:text-4xl lg:text-3xl font-semibold text-consulting-dark mb-4 sm:mb-6 hover-glow animate-elegant-fade-up animate-delay-100 leading-tight">
                       {phase.title}
                     </h3>
-                    <p className="text-base sm:text-lg text-consulting-light mb-6 leading-relaxed animate-elegant-fade-up animate-delay-200">
+                    <p className="text-lg sm:text-xl lg:text-lg text-consulting-light mb-6 sm:mb-8 leading-relaxed animate-elegant-fade-up animate-delay-200">
                       {phase.description}
                     </p>
 
                     {/* Deliverables */}
                     <div className="animate-elegant-fade-up animate-delay-300">
-                      <h4 className="font-semibold text-consulting-medium mb-3 text-sm sm:text-base">Key Deliverables:</h4>
+                      <h4 className="font-semibold text-consulting-medium mb-3 sm:mb-4 text-base sm:text-lg">Key Deliverables:</h4>
                       <div className="flex flex-wrap gap-2 sm:gap-3">
                         {phase.deliverables.map((deliverable, deliverableIndex) => (
                           <span
                             key={deliverable}
-                            className="px-3 sm:px-4 py-2 bg-consulting-subtle text-consulting-dark text-xs sm:text-sm font-medium rounded-lg hover:bg-consulting-medium hover:text-white transition-all duration-300 animate-premium-scale"
+                            className="px-4 sm:px-5 py-2 sm:py-3 bg-consulting-subtle text-consulting-dark text-sm sm:text-base font-medium rounded-lg hover:bg-consulting-medium hover:text-white transition-all duration-300 animate-premium-scale"
                             style={{ animationDelay: `${(index * 0.2) + (deliverableIndex * 0.1)}s` }}
                           >
                             {deliverable}
@@ -103,12 +103,12 @@ const Methodology = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-12 sm:mt-16 animate-elegant-fade-up animate-delay-500">
-          <div className="bg-gradient-hero rounded-xl sm:rounded-2xl p-8 sm:p-12 text-center hover:shadow-2xl transition-all duration-500">
-            <h3 className="font-sans text-2xl sm:text-3xl lg:text-4xl font-semibold text-white mb-4 animate-soft-glow">
+        <div className="text-center mt-16 sm:mt-20 lg:mt-24 animate-elegant-fade-up animate-delay-500">
+          <div className="bg-gradient-hero rounded-2xl sm:rounded-3xl p-8 sm:p-12 lg:p-16 text-center hover:shadow-2xl transition-all duration-500">
+            <h3 className="font-sans text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-semibold text-white mb-6 sm:mb-8 animate-soft-glow leading-tight">
               Experience Our Methodology in Action
             </h3>
-            <p className="text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed animate-elegant-fade-up animate-delay-100">
+            <p className="text-white/95 mb-8 sm:mb-10 lg:mb-12 max-w-3xl mx-auto text-lg sm:text-xl lg:text-2xl leading-relaxed animate-elegant-fade-up animate-delay-100 px-4">
               Schedule a complimentary strategy session to see how our proven approach
               can transform your business challenges into competitive advantages.
             </p>
@@ -116,7 +116,7 @@ const Methodology = () => {
               href="https://calendly.com/abhilash-kar-2024-sse/strategy-discovery"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white text-consulting-dark hover:bg-white/95 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-500 shadow-premium inline-block hover:scale-105 hover:shadow-xl animate-premium-scale animate-delay-200"
+              className="bg-white text-consulting-dark hover:bg-white/95 px-8 sm:px-10 lg:px-12 py-4 sm:py-5 lg:py-6 rounded-xl font-semibold transition-all duration-500 shadow-premium inline-block hover:scale-105 hover:shadow-xl animate-premium-scale animate-delay-200 text-lg sm:text-xl min-h-[60px] flex items-center justify-center"
             >
               Book Strategy Session
             </a>
