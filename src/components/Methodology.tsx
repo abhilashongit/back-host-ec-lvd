@@ -116,9 +116,9 @@ const Methodology = () => {
               href="https://calendly.com/abhilash-kar-2024-sse/strategy-discovery"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white text-consulting-dark hover:bg-white/95 px-8 sm:px-10 lg:px-12 py-4 sm:py-5 lg:py-6 rounded-xl font-semibold transition-all duration-500 shadow-premium inline-block hover:scale-105 hover:shadow-xl animate-premium-scale animate-delay-200 text-lg sm:text-xl min-h-[60px] flex items-center justify-center"
+              className="bg-black text-white hover:bg-black px-8 sm:px-10 lg:px-12 py-4 sm:py-5 lg:py-6 rounded-xl font-semibold transition-all duration-500 shadow-premium inline-block hover:scale-105 hover:shadow-xl animate-premium-scale animate-delay-200 text-lg sm:text-xl min-h-[60px] flex items-center justify-center relative overflow-hidden shine-button"
             >
-              Book Strategy Session
+              <span className="relative z-10">Book Strategy Session</span>
             </a>
           </div>
         </div>
