@@ -5,14 +5,14 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: Mail,
-      title: "Talk to our founder",
-      content: "abhilash@elevatorconsulting.in",
-      description: "Direct line to our founder"
+      title: "Reach out to us",
+      content: "business@elevatorconsulting.in",
+      description: "We'll get back to you superfast"
     },
     {
       icon: MapPin,
       title: "Address",
-      content: "Prestige Panorama, Pune - 411036",
+      content: "2nd Floor - Tower 5, World Trade Centre, Pune - 411014",
       description: "Our headquarters"
     }
   ];
