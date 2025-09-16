@@ -34,21 +34,21 @@ const Methodology = () => {
   ];
 
   return (
-    <section id="methodology" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="methodology" className="py-16 sm:py-20 lg:py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="font-sans text-4xl md:text-5xl font-bold text-consulting-dark mb-6">
+        <div className="text-center mb-12 sm:mb-16 animate-elegant-fade-up">
+          <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-consulting-dark mb-4 sm:mb-6 animate-soft-glow text-shadow-soft">
             The First Step Is Clarity.
           </h2>
-          <p className="text-xl text-consulting-light max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl lg:text-2xl text-consulting-light max-w-3xl mx-auto leading-relaxed animate-elegant-fade-up animate-delay-200">
             A systematic approach to business transformation that combines analytical rigor
             with practical execution expertise, ensuring sustainable results.
           </p>
         </div>
 
         {/* Methodology Steps */}
-        <div className="space-y-8">
+        <div className="space-y-6 sm:space-y-8">
           {phases.map((phase, index) => {
             // FIX: Assign the component to a capitalized variable
             const IconComponent = phase.icon; 
@@ -56,38 +56,39 @@ const Methodology = () => {
             return (
               <Card
                 key={phase.number}
-                className="p-8 bg-gradient-card border-consulting-subtle hover:shadow-card transition-smooth animate-slide-in"
+                className="p-6 sm:p-8 bg-gradient-card border-consulting-subtle hover:shadow-premium transition-all duration-500 animate-premium-scale hover:scale-[1.02]"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="flex flex-col lg:flex-row items-start gap-8">
+                <div className="flex flex-col lg:flex-row items-start gap-6 sm:gap-8">
                   {/* Phase Number & Icon */}
-                  <div className="flex-shrink-0 flex items-center gap-6">
-                    <div className="text-6xl font-bold text-consulting-subtle font-sans">
+                  <div className="flex-shrink-0 flex items-center gap-4 sm:gap-6 animate-gentle-slide-in">
+                    <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-consulting-subtle font-sans animate-soft-glow">
                       {phase.number}
                     </div>
-                    <div className="w-16 h-16 bg-consulting-dark rounded-lg flex items-center justify-center">
+                    <div className="w-14 h-14 sm:w-16 sm:h-16 bg-consulting-dark rounded-xl flex items-center justify-center hover:bg-consulting-medium transition-all duration-500 hover:shadow-lg">
                       {/* FIX: Use the capitalized variable here */}
-                      <IconComponent className="h-8 w-8 text-white" />
+                      <IconComponent className="h-7 w-7 sm:h-8 sm:w-8 text-white" />
                     </div>
                   </div>
 
                   {/* Content */}
                   <div className="flex-1">
-                    <h3 className="font-sans text-2xl md:text-3xl font-semibold text-consulting-dark mb-4">
+                    <h3 className="font-sans text-xl sm:text-2xl md:text-3xl font-semibold text-consulting-dark mb-4 hover-glow animate-elegant-fade-up animate-delay-100">
                       {phase.title}
                     </h3>
-                    <p className="text-lg text-consulting-light mb-6 leading-relaxed">
+                    <p className="text-base sm:text-lg text-consulting-light mb-6 leading-relaxed animate-elegant-fade-up animate-delay-200">
                       {phase.description}
                     </p>
 
                     {/* Deliverables */}
-                    <div>
-                      <h4 className="font-semibold text-consulting-medium mb-3">Key Deliverables:</h4>
-                      <div className="flex flex-wrap gap-3">
-                        {phase.deliverables.map((deliverable) => (
+                    <div className="animate-elegant-fade-up animate-delay-300">
+                      <h4 className="font-semibold text-consulting-medium mb-3 text-sm sm:text-base">Key Deliverables:</h4>
+                      <div className="flex flex-wrap gap-2 sm:gap-3">
+                        {phase.deliverables.map((deliverable, deliverableIndex) => (
                           <span
                             key={deliverable}
-                            className="px-4 py-2 bg-consulting-subtle text-consulting-dark text-sm font-medium rounded-lg"
+                            className="px-3 sm:px-4 py-2 bg-consulting-subtle text-consulting-dark text-xs sm:text-sm font-medium rounded-lg hover:bg-consulting-medium hover:text-white transition-all duration-300 animate-premium-scale"
+                            style={{ animationDelay: `${(index * 0.2) + (deliverableIndex * 0.1)}s` }}
                           >
                             {deliverable}
                           </span>
@@ -102,12 +103,12 @@ const Methodology = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16 animate-fade-in">
-          <div className="bg-gradient-hero rounded-2xl p-12 text-center">
-            <h3 className="font-sans text-3xl font-semibold text-white mb-4">
+        <div className="text-center mt-12 sm:mt-16 animate-elegant-fade-up animate-delay-500">
+          <div className="bg-gradient-hero rounded-xl sm:rounded-2xl p-8 sm:p-12 text-center hover:shadow-2xl transition-all duration-500">
+            <h3 className="font-sans text-2xl sm:text-3xl lg:text-4xl font-semibold text-white mb-4 animate-soft-glow">
               Experience Our Methodology in Action
             </h3>
-            <p className="text-white/90 mb-8 max-w-2xl mx-auto text-lg">
+            <p className="text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed animate-elegant-fade-up animate-delay-100">
               Schedule a complimentary strategy session to see how our proven approach
               can transform your business challenges into competitive advantages.
             </p>
@@ -115,7 +116,7 @@ const Methodology = () => {
               href="https://calendly.com/abhilash-kar-2024-sse/strategy-discovery"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white text-consulting-dark hover:bg-white/90 px-8 py-4 rounded-lg font-semibold transition-smooth shadow-premium inline-block"
+              className="bg-white text-consulting-dark hover:bg-white/95 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-500 shadow-premium inline-block hover:scale-105 hover:shadow-xl animate-premium-scale animate-delay-200"
             >
               Book Strategy Session
             </a>
