@@ -55,7 +55,7 @@ const Navigation = () => {
           {/* CTA Button */}
           <div className="hidden md:block animate-premium-scale animate-delay-300">
             <a 
-              href="https://calendly.com/abhilash-kar-2024-sse/strategy-discovery"
+              href="https://calendly.com/theabhilashkar/discovering-what-works-elevator-consulting"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -99,7 +99,7 @@ const Navigation = () => {
               ))}
               <div className="pt-4 animate-premium-scale animate-delay-300">
                 <a 
-                  href="https://calendly.com/abhilash-kar-2024-sse/strategy-discovery"
+                  href="https://calendly.com/theabhilashkar/discovering-what-works-elevator-consulting"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

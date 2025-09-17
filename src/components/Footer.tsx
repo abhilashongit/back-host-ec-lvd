@@ -21,7 +21,7 @@ const Footer = () => {
           {/* Action Buttons */}
           <div className="flex justify-center animate-elegant-fade-up animate-delay-300">
             <a 
-              href="https://calendly.com/abhilash-kar-2024-sse/strategy-discovery" 
+              href="https://calendly.com/theabhilashkar/discovering-what-works-elevator-consulting" 
               target="_blank" 
               rel="noopener noreferrer"
               style={{ textDecoration: 'none' }}
