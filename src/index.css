@@ -69,6 +69,7 @@ All colors MUST be HSL.
 
     /* Premium shadows */
     --shadow-premium: 0 25px 50px -12px hsla(0 0% 14% / 0.25);
+    --shadow-premium-lg: 0 35px 60px -15px hsla(0 0% 14% / 0.35);
     --shadow-card: 0 10px 30px -10px hsla(0 0% 14% / 0.1);
     --shadow-subtle: 0 4px 20px -4px hsla(0 0% 14% / 0.08);
 
@@ -259,6 +260,49 @@ All colors MUST be HSL.
     100% {
       background-position: 200% 0;
     }
+  }
+
+  /* Glossy shine animation for buttons */
+  @keyframes glossy-shine {
+    0% {
+      left: -100%;
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 0.8;
+    }
+    100% {
+      left: 100%;
+      opacity: 0.5;
+    }
+  }
+
+  /* Glossy button style */
+  .shine-button-glossy::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    filter: blur(30px);
+    animation: glossy-shine 3.5s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  .shine-button-glossy::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 30px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    filter: blur(5px);
+    animation: glossy-shine 3.5s ease-in-out infinite;
+    animation-delay: 0.1s;
+    pointer-events: none;
   }
 
   /* Premium animation classes */

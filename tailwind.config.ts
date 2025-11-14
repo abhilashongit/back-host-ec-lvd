@@ -83,6 +83,7 @@ export default {
 			},
 			boxShadow: {
 				'premium': 'var(--shadow-premium)',
+				'premium-lg': 'var(--shadow-premium-lg)',
 				'card': 'var(--shadow-card)',
 				'subtle': 'var(--shadow-subtle)'
 			},
