@@ -43,14 +43,10 @@ const Footer = () => {
             © 2024 Elevator Consulting. All rights reserved.
           </div>
           
-          {/* Social Links */}
-          <div className="flex items-center gap-4 sm:gap-6 order-1 md:order-2">
-            <a href="https://www.linkedin.com/company/elevatorconsultingin/" className="text-white/80 hover:text-white transition-all duration-300 hover:scale-110">
-              <Linkedin className="h-6 w-6 sm:h-7 sm:w-7" />
-            </a>
-          </div>
+          {/* Spacer for layout */}
+          <div className="order-1 md:order-2"></div>
           
-          {/* Legal Links */}
+          {/* Navigation Links */}
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-sm sm:text-base order-2 md:order-3">
             <a 
               href="#" 
@@ -62,11 +58,11 @@ const Footer = () => {
             >
               Contact Us
             </a>
-            <a href="#" className="text-white/80 hover:text-white transition-all duration-300 hover:scale-105">
-              Privacy Policy
-            </a>
-            <a href="#" className="text-white/80 hover:text-white transition-all duration-300 hover:scale-105">
-              Terms of Service
+            <a 
+              href="/careers" 
+              className="text-white/80 hover:text-white transition-all duration-300 hover:scale-105"
+            >
+              Careers
             </a>
           </div>
         </div>
