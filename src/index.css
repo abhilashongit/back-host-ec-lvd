@@ -277,6 +277,87 @@ All colors MUST be HSL.
     }
   }
 
+  /* Hero text gradient fill animation */
+  @keyframes gradient-fill {
+    0% {
+      background-position: 0% 50%;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
+  /* Kinematic beat animation for caption */
+  @keyframes kinematic-beat {
+    0% {
+      opacity: 0;
+      transform: scale(0.95) translateY(10px);
+    }
+    20% {
+      opacity: 0.3;
+      transform: scale(0.97) translateY(7px);
+    }
+    40% {
+      opacity: 0.6;
+      transform: scale(0.99) translateY(3px);
+    }
+    60% {
+      opacity: 0.8;
+      transform: scale(1.01) translateY(0);
+    }
+    80% {
+      opacity: 0.95;
+      transform: scale(1) translateY(0);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  /* Pipe filling button animations */
+  @keyframes pipe-outline-draw {
+    0% {
+      stroke-dashoffset: 1000;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes pipe-fill {
+    0% {
+      clip-path: inset(0 100% 0 0);
+    }
+    100% {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  @keyframes text-reveal {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes pipe-button-appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
   /* Glossy button style */
   .shine-button-glossy::before {
     content: "";
@@ -308,6 +389,97 @@ All colors MUST be HSL.
   /* Premium animation classes */
   .animate-glitter {
     animation: glitter 0.6s ease-in-out;
+  }
+
+  /* Hero gradient fill */
+  .animate-gradient-fill {
+    animation: gradient-fill 2s ease-out forwards;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 1)
+    );
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Kinematic beat animation */
+  .animate-kinematic-beat {
+    animation: kinematic-beat 1.5s cubic-bezier(0.4, 0, 0.2, 1) 0.5s forwards;
+    opacity: 0;
+  }
+
+  /* Pipe fill button animations */
+  .animate-pipe-fill {
+    animation: pipe-button-appear 0.1s ease-out 2s forwards;
+    opacity: 0;
+  }
+
+  .pipe-fill-button {
+    animation: pipe-button-appear 0.1s ease-out 2s forwards;
+    opacity: 0;
+  }
+
+  .pipe-fill-button::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(90deg, 
+      transparent 0%, 
+      white 20%, 
+      white 80%, 
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: pipe-outline-draw 1.5s ease-out 2s forwards;
+    background-position: -100% 0;
+  }
+
+  @keyframes pipe-outline-draw {
+    0% {
+      background-position: -100% 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
+
+  .pipe-fill-button::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: white;
+    border-radius: inherit;
+    animation: pipe-fill 0.8s ease-out 3.5s forwards;
+    clip-path: inset(0 100% 0 0);
+    z-index: 1;
+  }
+
+  .pipe-fill-text {
+    animation: text-reveal 0.3s ease-out 4s forwards;
+    opacity: 0;
+    color: white;
+    z-index: 10;
+    position: relative;
+  }
+
+  .pipe-fill-button:hover::after {
+    background: white;
+  }
+
+  .pipe-fill-button:hover .pipe-fill-text {
+    color: hsl(var(--consulting-dark));
   }
 
   .animate-elegant-fade-up {
