@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -11,6 +12,7 @@ import { ChevronDown } from "lucide-react";
 
 const Careers = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
 
   useEffect(() => {
     document.title = "Careers | Elevator Consulting";
@@ -153,27 +155,66 @@ const Careers = () => {
       {/* Apply Section */}
       <section className="py-12 sm:py-16 px-4">
         <div className="max-w-2xl mx-auto text-center space-y-6">
-          <a
-            href="mailto:careers@elevatorconsulting.in"
-            className="inline-block"
-          >
-            <Button
-              size="lg"
-              className="bg-black text-white px-8 sm:px-12 py-6 sm:py-8 text-lg sm:text-xl font-semibold rounded-2xl relative overflow-hidden group hover:scale-105 transition-all duration-500 shine-button-glossy shadow-premium hover:shadow-premium-lg"
-            >
-              <span className="relative z-10">Apply Now</span>
-            </Button>
-          </a>
-          
-          <p className="text-consulting-medium text-base sm:text-lg">
-            In case the button doesn't work:<br />
-            <a
-              href="mailto:careers@elevatorconsulting.in"
-              className="font-semibold text-consulting-dark hover:text-consulting-medium transition-colors duration-300 hover-glow"
-            >
-              careers@elevatorconsulting.in
-            </a>
-          </p>
+          {!showSuccess ? (
+            <>
+              <a
+                href="mailto:careers@elevatorconsulting.in"
+                className="inline-block"
+                onClick={() => setShowSuccess(true)}
+              >
+                <Button
+                  size="lg"
+                  className="bg-black text-white px-8 sm:px-12 py-6 sm:py-8 text-lg sm:text-xl font-semibold rounded-2xl relative overflow-hidden group hover:scale-105 transition-all duration-500 shine-button-glossy shadow-premium hover:shadow-premium-lg"
+                >
+                  <span className="relative z-10">Apply Now</span>
+                </Button>
+              </a>
+              
+              <p className="text-consulting-medium text-base sm:text-lg">
+                In case the button doesn't work:<br />
+                <a
+                  href="mailto:careers@elevatorconsulting.in"
+                  className="font-semibold text-consulting-dark hover:text-consulting-medium transition-colors duration-300 hover-glow"
+                >
+                  careers@elevatorconsulting.in
+                </a>
+              </p>
+            </>
+          ) : (
+            <div className="bg-white/80 backdrop-blur-xl border border-consulting-subtle/30 rounded-2xl p-8 sm:p-12 shadow-premium animate-elegant-fade-up">
+              <div className="text-6xl mb-6">😊</div>
+              <h3 className="font-brand text-2xl sm:text-3xl font-semibold text-consulting-dark mb-4">
+                Success!
+              </h3>
+              <p className="text-lg sm:text-xl text-consulting-medium mb-8 leading-relaxed">
+                We're excited to see your application! You'll get a mail from us in the next few days.
+              </p>
+              
+              <Link to="/">
+                <Button
+                  size="lg"
+                  className="bg-black text-white px-8 py-4 text-base sm:text-lg font-semibold rounded-xl relative overflow-hidden group hover:scale-105 transition-all duration-500 shine-button-glossy shadow-premium hover:shadow-premium-lg mb-6"
+                >
+                  <span className="relative z-10">Back to Homepage</span>
+                </Button>
+              </Link>
+              
+              <div className="pt-6 border-t border-consulting-subtle/30">
+                <p className="text-consulting-medium text-sm sm:text-base mb-2">
+                  Button didn't work?
+                </p>
+                <p className="text-consulting-medium text-sm sm:text-base">
+                  Here's the mail ID:{" "}
+                  <a
+                    href="mailto:careers@elevatorconsulting.in"
+                    className="font-semibold text-consulting-dark hover:text-consulting-medium transition-colors duration-300 hover-glow"
+                  >
+                    careers@elevatorconsulting.in
+                  </a>
+                </p>
+              </div>
+            </div>
+          )}
         </div>
       </section>
 

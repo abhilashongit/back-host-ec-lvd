@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
@@ -31,9 +32,11 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <div className="flex-shrink-0 animate-gentle-slide-in">
-            <h2 className="font-brand text-lg sm:text-xl lg:text-2xl font-bold text-consulting-dark hover-glow">
-              Elevator Consulting
-            </h2>
+            <Link to="/">
+              <h2 className="font-brand text-lg sm:text-xl lg:text-2xl font-bold text-consulting-dark hover-glow cursor-pointer">
+                Elevator Consulting
+              </h2>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
