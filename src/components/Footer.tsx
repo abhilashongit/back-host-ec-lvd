@@ -10,7 +10,7 @@ const Footer = () => {
               Elevator Consulting
             </h3>
           <p className="text-white/90 mb-6 sm:mb-8 leading-relaxed max-w-3xl mx-auto text-base sm:text-lg lg:text-xl px-4 animate-elegant-fade-up animate-delay-200">
-            A
+            Helping legacy B2B companies transition to new-age processes, while cleaning up and optimising revenue operations and operational processes.
           </p>
           
           {/* Action Buttons */}
