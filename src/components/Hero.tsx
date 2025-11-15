@@ -13,6 +13,8 @@ const Hero = () => {
         }}
       >
         <div className="absolute inset-0 bg-gradient-overlay"></div>
+        {/* Smooth blur merge to white */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent via-white/50 to-white backdrop-blur-sm"></div>
       </div>
       
       {/* Content */}
