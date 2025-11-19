@@ -49,7 +49,7 @@ const SolutionPromise = () => {
             {/* Connector 1 */}
             <path
               className="flow-path"
-              d="M 210 100 L 340 100"
+              d="M 215 100 L 332 100"
               stroke="hsl(var(--foreground))"
               strokeWidth="4"
               strokeLinecap="round"
@@ -81,7 +81,7 @@ const SolutionPromise = () => {
             {/* Connector 2 */}
             <path
               className="flow-path"
-              d="M 460 100 L 590 100"
+              d="M 465 100 L 582 100"
               stroke="hsl(var(--foreground))"
               strokeWidth="4"
               strokeLinecap="round"
