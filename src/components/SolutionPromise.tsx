@@ -30,23 +30,16 @@ const SolutionPromise = () => {
                 cx="150" 
                 cy="100" 
                 r="60" 
-                fill="hsl(var(--primary))" 
-                opacity="0.15"
-              />
-              <circle 
-                cx="150" 
-                cy="100" 
-                r="60" 
+                fill="white"
                 stroke="hsl(var(--primary))" 
-                strokeWidth="3"
-                fill="none"
+                strokeWidth="4"
               />
               <text 
                 x="150" 
-                y="105" 
+                y="108" 
                 textAnchor="middle" 
                 fill="hsl(var(--primary))"
-                fontSize="20"
+                fontSize="22"
                 fontWeight="700"
               >
                 Process
@@ -57,8 +50,8 @@ const SolutionPromise = () => {
             <path
               className="flow-path"
               d="M 210 100 L 340 100"
-              stroke="hsl(var(--primary))"
-              strokeWidth="3"
+              stroke="hsl(var(--foreground))"
+              strokeWidth="4"
               strokeLinecap="round"
               markerEnd="url(#arrowhead)"
             />
@@ -69,23 +62,16 @@ const SolutionPromise = () => {
                 cx="400" 
                 cy="100" 
                 r="60" 
-                fill="hsl(var(--secondary))" 
-                opacity="0.15"
-              />
-              <circle 
-                cx="400" 
-                cy="100" 
-                r="60" 
-                stroke="hsl(var(--secondary))" 
-                strokeWidth="3"
-                fill="none"
+                fill="white"
+                stroke="hsl(var(--primary))" 
+                strokeWidth="4"
               />
               <text 
                 x="400" 
-                y="105" 
+                y="108" 
                 textAnchor="middle" 
-                fill="hsl(var(--secondary-foreground))"
-                fontSize="20"
+                fill="hsl(var(--primary))"
+                fontSize="22"
                 fontWeight="700"
               >
                 People
@@ -96,8 +82,8 @@ const SolutionPromise = () => {
             <path
               className="flow-path"
               d="M 460 100 L 590 100"
-              stroke="hsl(var(--primary))"
-              strokeWidth="3"
+              stroke="hsl(var(--foreground))"
+              strokeWidth="4"
               strokeLinecap="round"
               markerEnd="url(#arrowhead)"
             />
@@ -108,23 +94,16 @@ const SolutionPromise = () => {
                 cx="650" 
                 cy="100" 
                 r="60" 
-                fill="hsl(var(--accent))" 
-                opacity="0.15"
-              />
-              <circle 
-                cx="650" 
-                cy="100" 
-                r="60" 
-                stroke="hsl(var(--accent))" 
-                strokeWidth="3"
-                fill="none"
+                fill="white"
+                stroke="hsl(var(--primary))" 
+                strokeWidth="4"
               />
               <text 
                 x="650" 
-                y="95" 
+                y="98" 
                 textAnchor="middle" 
-                fill="hsl(var(--accent-foreground))"
-                fontSize="18"
+                fill="hsl(var(--primary))"
+                fontSize="19"
                 fontWeight="700"
               >
                 Positioning
@@ -143,7 +122,7 @@ const SolutionPromise = () => {
               >
                 <polygon
                   points="0 0, 10 3, 0 6"
-                  fill="hsl(var(--primary))"
+                  fill="hsl(var(--foreground))"
                 />
               </marker>
             </defs>

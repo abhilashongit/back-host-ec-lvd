@@ -3,6 +3,8 @@ import Navigation from "@/components/Navigation";
 import HeroNew from "@/components/HeroNew";
 import ProblemDiagnosis from "@/components/ProblemDiagnosis";
 import SolutionPromise from "@/components/SolutionPromise";
+import BenefitsCards from "@/components/BenefitsCards";
+import ProcessTimeline from "@/components/ProcessTimeline";
 import Services from "@/components/Services";
 import Methodology from "@/components/Methodology";
 import Contact from "@/components/Contact";
@@ -21,6 +23,8 @@ const Index = () => {
       <HeroNew />
       <ProblemDiagnosis />
       <SolutionPromise />
+      <BenefitsCards />
+      <ProcessTimeline />
       <Services />
       <Methodology />
       <Contact />
