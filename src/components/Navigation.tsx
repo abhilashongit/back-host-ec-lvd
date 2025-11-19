@@ -8,16 +8,18 @@ const Navigation = () => {
   const [showNav, setShowNav] = useState(false);
 
   const navItems = [
+    { label: "Home", href: "/" },
     { label: "Services", href: "#services" },
-    { label: "Methodology", href: "#methodology" },
+    { label: "Case Studies", href: "#case-studies" },
+    { label: "About", href: "#about" },
     { label: "Contact", href: "#contact" },
   ];
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      // Show nav when scrolled past 100px (adjust as needed)
-      setShowNav(scrollY > 100);
+      // Add blur backdrop when scrolled past 50px
+      setShowNav(scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -25,8 +27,10 @@ const Navigation = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 bg-white/10 backdrop-blur-2xl border-b border-white/20 shadow-2xl transition-all duration-500 ease-out ${
-      showNav ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${
+      showNav 
+        ? 'bg-white/90 backdrop-blur-xl border-b border-border/40 shadow-sm' 
+        : 'bg-transparent border-b border-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
@@ -65,7 +69,7 @@ const Navigation = () => {
               <Button 
                 className="bg-consulting-dark hover:bg-consulting-medium text-white px-4 lg:px-6 py-2 text-sm lg:text-base font-semibold transition-all duration-500 relative overflow-hidden group hover:scale-105 hover:shadow-premium"
               >
-                <span className="relative z-10">Let's have a chat</span>
+                <span className="relative z-10">Book a call</span>
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-glitter"></div>
                 </div>
