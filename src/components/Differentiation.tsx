@@ -68,14 +68,20 @@ const Differentiation = () => {
 
             <div className="space-y-6">
               {comparisons.map((item, index) => (
-                <div key={index}>
-                  <div className="grid grid-cols-3 gap-6 items-center">
-                    <div className="font-medium text-foreground">{item.feature}</div>
-                    <div className="text-center">
+                <div 
+                  key={index}
+                  className="animate-fade-in"
+                  style={{ animationDelay: `${index * 150}ms` }}
+                >
+                  <div className="grid grid-cols-3 gap-6 items-center group hover:bg-muted/30 p-4 rounded-lg transition-all duration-300">
+                    <div className="font-medium text-foreground group-hover:text-primary transition-colors duration-300">
+                      {item.feature}
+                    </div>
+                    <div className="text-center transform group-hover:scale-95 transition-transform duration-300">
                       <p className="text-sm text-muted-foreground">{item.others}</p>
                     </div>
-                    <div className="text-center">
-                      <p className="text-sm font-medium text-foreground bg-primary/5 py-2 px-4 rounded-lg">
+                    <div className="text-center transform group-hover:scale-105 transition-transform duration-300">
+                      <p className="text-sm font-medium text-foreground bg-primary/5 py-2 px-4 rounded-lg group-hover:bg-primary/10 group-hover:shadow-md transition-all duration-300">
                         {item.us}
                       </p>
                     </div>
