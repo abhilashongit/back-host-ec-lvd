@@ -5,6 +5,9 @@ import ProblemDiagnosis from "@/components/ProblemDiagnosis";
 import SolutionPromise from "@/components/SolutionPromise";
 import BenefitsCards from "@/components/BenefitsCards";
 import ProcessTimeline from "@/components/ProcessTimeline";
+import Results from "@/components/Results";
+import CaseStudies from "@/components/CaseStudies";
+import Differentiation from "@/components/Differentiation";
 import Services from "@/components/Services";
 import Methodology from "@/components/Methodology";
 import Contact from "@/components/Contact";
@@ -25,6 +28,9 @@ const Index = () => {
       <SolutionPromise />
       <BenefitsCards />
       <ProcessTimeline />
+      <Results />
+      <CaseStudies />
+      <Differentiation />
       <Services />
       <Methodology />
       <Contact />
