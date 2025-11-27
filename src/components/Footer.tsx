@@ -33,11 +33,11 @@ const Footer = () => {
           
           {/* Action Buttons */}
           <div className="flex justify-center animate-elegant-fade-up animate-delay-300">
-            <a href="https://calendly.com/theabhilashkar/discovering-what-works-elevator-consulting" target="_blank" rel="noopener noreferrer" style={{
+            <a href="https://calendly.com/theabhilashkar/the-best-fifteen-minutes-of-your-life" target="_blank" rel="noopener noreferrer" style={{
             textDecoration: 'none'
           }}>
               <Button className="bg-white text-consulting-dark hover:bg-white/95 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-500 hover:scale-105 hover:shadow-xl min-h-[50px] sm:min-h-[60px] rounded-xl">
-                Schedule a Session
+                Book Your 11 Minutes
               </Button>
             </a>
           </div>

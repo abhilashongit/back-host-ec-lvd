@@ -1,186 +1,114 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Check, Zap, Rocket, Crown } from "lucide-react";
-import { Separator } from "@/components/ui/separator";
+import { Check, Crown, ArrowRight, Heart } from "lucide-react";
 
 const Pricing = () => {
-  const plans = [
-    {
-      name: "Positioning Sprint",
-      icon: Zap,
-      price: "$25K",
-      duration: "4 weeks",
-      description: "Perfect for pre-seed/seed startups needing clear positioning fast",
-      features: [
-        "15 customer interviews",
-        "ICP definition & segmentation",
-        "Core positioning statement",
-        "Value prop framework",
-        "Messaging hierarchy",
-        "Competitive positioning map",
-        "Sales pitch deck",
-        "2 revision rounds"
-      ],
-      highlight: false,
-      cta: "Get Started"
-    },
-    {
-      name: "Full Engine",
-      icon: Rocket,
-      price: "$45K",
-      duration: "6 weeks",
-      description: "Complete positioning transformation for Series A/B companies",
-      features: [
-        "Everything in Sprint, plus:",
-        "30 customer interviews",
-        "Buyer journey mapping",
-        "Category creation framework",
-        "Complete messaging playbook",
-        "Sales enablement kit",
-        "Marketing campaign briefs",
-        "Website copy & structure",
-        "Launch strategy & support",
-        "3 revision rounds"
-      ],
-      highlight: true,
-      cta: "Most Popular"
-    },
-    {
-      name: "Enterprise",
-      icon: Crown,
-      price: "Custom",
-      duration: "8-12 weeks",
-      description: "For growth-stage companies needing market dominance",
-      features: [
-        "Everything in Full Engine, plus:",
-        "50+ stakeholder interviews",
-        "Multi-product positioning",
-        "Go-to-market strategy",
-        "Sales training program",
-        "Content strategy roadmap",
-        "Partner positioning kit",
-        "International expansion",
-        "6 months advisory support",
-        "Unlimited revisions"
-      ],
-      highlight: false,
-      cta: "Contact Sales"
-    }
+  const features = [
+    "Complete sales engine audit",
+    "Process redesign & playbook creation",
+    "Team training & enablement",
+    "Positioning & messaging strategy",
+    "Go-to-market optimization",
+    "Ongoing strategic advisory",
+    "Direct access to our team",
+    "Quarterly business reviews",
   ];
 
-  const guarantees = [
+  const retainerBenefits = [
     {
-      title: "Money-Back Guarantee",
-      description: "If we don't deliver positioning that moves the needle, you don't pay. Period."
+      title: "Always Available",
+      description: "Direct line to our team whenever you need strategic guidance or tactical support."
     },
     {
-      title: "No Retainer Lock-In",
-      description: "Fixed-price engagement. No ongoing fees unless you want extended support."
+      title: "Continuous Optimization",
+      description: "Markets change. Competitors evolve. We keep your sales engine calibrated."
     },
     {
-      title: "IP Ownership",
-      description: "You own 100% of the positioning, messaging, and all deliverables. No strings."
+      title: "No Surprises",
+      description: "Predictable investment. Clear deliverables. Full transparency."
     }
   ];
 
   return (
-    <section className="py-24 bg-muted/30">
+    <section id="pricing" className="py-24 bg-muted/30">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16 reveal-on-scroll">
-          <p className="text-sm font-medium text-primary mb-2">PRICING</p>
+          <p className="text-sm font-medium text-primary mb-2">INVESTMENT</p>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Transparent Pricing, Zero Surprises
+            Custom-Built for Your Business
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Fixed-price engagements designed for startups. Pay for results, not hourly rates.
+            Every business is different. Every engagement is tailored. Let's design something that actually works for you.
           </p>
         </div>
 
-        {/* Pricing Cards */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
-          {plans.map((plan, index) => {
-            const Icon = plan.icon;
-            return (
-              <Card
-                key={index}
-                className={`reveal-on-scroll relative overflow-hidden ${
-                  plan.highlight 
-                    ? 'border-primary border-2 shadow-2xl scale-105' 
-                    : 'border-2'
-                }`}
-                style={{ transitionDelay: `${index * 100}ms` }}
+        {/* Main Pricing Card */}
+        <div className="max-w-3xl mx-auto mb-16">
+          <Card className="reveal-on-scroll border-2 border-primary shadow-2xl overflow-hidden">
+            <div className="bg-primary text-primary-foreground px-6 py-3 text-center">
+              <span className="text-sm font-bold tracking-wide">TAILORED ENGAGEMENT</span>
+            </div>
+            
+            <CardHeader className="text-center pb-8 pt-10">
+              <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
+                <Crown className="w-10 h-10 text-primary" />
+              </div>
+              <CardTitle className="text-3xl mb-4">Custom Scope & Pricing</CardTitle>
+              <p className="text-muted-foreground text-lg">
+                Scoped specifically to your challenges, goals, and timeline
+              </p>
+            </CardHeader>
+
+            <CardContent className="pb-10">
+              <div className="grid sm:grid-cols-2 gap-4 mb-10">
+                {features.map((feature, idx) => (
+                  <div key={idx} className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">{feature}</span>
+                  </div>
+                ))}
+              </div>
+
+              <a 
+                href="https://calendly.com/theabhilashkar/the-best-fifteen-minutes-of-your-life"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
               >
-                {plan.highlight && (
-                  <div className="absolute top-0 right-0 bg-primary text-primary-foreground px-4 py-1 text-xs font-bold rounded-bl-lg">
-                    MOST POPULAR
-                  </div>
-                )}
-                
-                <CardHeader className="text-center pb-8">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Icon className="w-8 h-8 text-primary" />
-                  </div>
-                  <CardTitle className="text-2xl mb-2">{plan.name}</CardTitle>
-                  <div className="space-y-1">
-                    <div className="text-4xl font-bold text-foreground">{plan.price}</div>
-                    <div className="text-sm text-muted-foreground">{plan.duration}</div>
-                  </div>
-                  <p className="text-sm text-muted-foreground mt-4">{plan.description}</p>
-                </CardHeader>
-
-                <CardContent>
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className={`text-sm ${feature.includes('Everything') ? 'font-semibold text-foreground' : 'text-muted-foreground'}`}>
-                          {feature}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <Button 
-                    className="w-full" 
-                    size="lg"
-                    variant={plan.highlight ? "default" : "outline"}
-                  >
-                    {plan.cta}
-                  </Button>
-                </CardContent>
-              </Card>
-            );
-          })}
+                <Button className="w-full" size="lg">
+                  Discuss Your Needs
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </a>
+            </CardContent>
+          </Card>
         </div>
 
-        {/* Guarantees */}
+        {/* Retainer Value Proposition */}
         <div className="max-w-5xl mx-auto reveal-on-scroll">
-          <h3 className="text-2xl font-bold text-center mb-8">Our Guarantees</h3>
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-4">
+              <Heart className="w-5 h-5 text-primary" />
+              <span className="text-sm font-semibold text-primary">Why We Work on Retainer</span>
+            </div>
+            <h3 className="text-2xl sm:text-3xl font-bold mb-4">We're Here for You, Always</h3>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Real transformation doesn't happen in a sprint. It happens when you have a partner 
+              committed to your success — not just during the project, but every step after.
+            </p>
+          </div>
+
           <div className="grid md:grid-cols-3 gap-6">
-            {guarantees.map((guarantee, index) => (
-              <Card key={index} className="border-2 text-center">
+            {retainerBenefits.map((benefit, index) => (
+              <Card key={index} className="border-2 text-center hover:shadow-lg transition-all duration-300 hover:border-primary/30">
                 <CardContent className="p-6">
-                  <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-green-500/10 flex items-center justify-center">
-                    <Check className="w-6 h-6 text-green-500" />
-                  </div>
-                  <h4 className="font-bold mb-2 text-foreground">{guarantee.title}</h4>
-                  <p className="text-sm text-muted-foreground">{guarantee.description}</p>
+                  <h4 className="font-bold text-lg mb-2 text-foreground">{benefit.title}</h4>
+                  <p className="text-sm text-muted-foreground">{benefit.description}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
-        </div>
-
-        <Separator className="my-16 max-w-3xl mx-auto" />
-
-        {/* FAQ Teaser */}
-        <div className="text-center reveal-on-scroll">
-          <h3 className="text-2xl font-bold mb-4">Questions about pricing?</h3>
-          <p className="text-muted-foreground mb-6">
-            We're happy to discuss which package fits your stage and goals
-          </p>
-          <Button size="lg">Schedule a Call</Button>
         </div>
       </div>
     </section>

@@ -9,9 +9,9 @@ const Navigation = () => {
 
   const navItems = [
     { label: "Home", href: "/" },
-    { label: "Services", href: "#services" },
-    { label: "Case Studies", href: "#case-studies" },
-    { label: "About", href: "#about" },
+    { label: "How We're Different", href: "#differentiation" },
+    { label: "Pricing", href: "#pricing" },
+    { label: "FAQ", href: "#faq" },
     { label: "Contact", href: "#contact" },
   ];
 
@@ -62,14 +62,14 @@ const Navigation = () => {
           {/* CTA Button */}
           <div className="hidden md:block animate-premium-scale animate-delay-300">
             <a 
-              href="https://calendly.com/theabhilashkar/discovering-what-works-elevator-consulting"
+              href="https://calendly.com/theabhilashkar/the-best-fifteen-minutes-of-your-life"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Button 
                 className="bg-consulting-dark hover:bg-consulting-medium text-white px-4 lg:px-6 py-2 text-sm lg:text-base font-semibold transition-all duration-500 relative overflow-hidden group hover:scale-105 hover:shadow-premium"
               >
-                <span className="relative z-10">Book a call</span>
+                <span className="relative z-10">Book 11 minutes</span>
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-glitter"></div>
                 </div>
@@ -106,14 +106,14 @@ const Navigation = () => {
               ))}
               <div className="pt-4 animate-premium-scale animate-delay-300">
                 <a 
-                  href="https://calendly.com/theabhilashkar/discovering-what-works-elevator-consulting"
+                  href="https://calendly.com/theabhilashkar/the-best-fifteen-minutes-of-your-life"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <Button 
                     className="w-full bg-consulting-dark hover:bg-consulting-medium text-white font-semibold transition-all duration-500 relative overflow-hidden group py-3 hover:shadow-premium"
                   >
-                    <span className="relative z-10">Let's have a chat</span>
+                    <span className="relative z-10">Book 11 minutes</span>
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-glitter"></div>
                     </div>
