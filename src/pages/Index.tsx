@@ -11,6 +11,7 @@ import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import FloatingCTA from "@/components/FloatingCTA";
 import { initAllAnimations } from "@/utils/animations";
 
 const Index = () => {
@@ -22,6 +23,7 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
+      <FloatingCTA />
       <HeroNew />
       <ProblemDiagnosis />
       <SolutionPromise />
