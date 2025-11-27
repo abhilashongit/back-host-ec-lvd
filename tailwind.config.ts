@@ -134,11 +134,15 @@ export default {
 					'0%': { clipPath: 'inset(0 100% 0 0)' },
 					'100%': { clipPath: 'inset(0 0 0 0)' }
 				},
-				'text-reveal': {
-					'0%': { opacity: '0' },
-					'100%': { opacity: '1' }
-				}
+			'text-reveal': {
+				'0%': { opacity: '0' },
+				'100%': { opacity: '1' }
 			},
+			'pulse-subtle': {
+				'0%, 100%': { transform: 'scale(1)', boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)' },
+				'50%': { transform: 'scale(1.03)', boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.35)' }
+			}
+		},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
