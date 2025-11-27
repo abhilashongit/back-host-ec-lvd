@@ -157,7 +157,7 @@ const HeroNew = () => {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
             <a 
-              href="https://calendly.com/theabhilashkar/discovering-what-works-elevator-consulting"
+              href="https://calendly.com/theabhilashkar/the-best-fifteen-minutes-of-your-life"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -165,7 +165,7 @@ const HeroNew = () => {
                 size="lg" 
                 className="cta-primary bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-lg font-semibold min-h-[56px] rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                Book a call
+                Book 11 minutes
               </Button>
             </a>
             

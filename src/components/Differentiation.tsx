@@ -7,17 +7,17 @@ const Differentiation = () => {
     {
       feature: "Timeline",
       others: "3-6 months of guesswork",
-      us: "6 weeks with guaranteed outcomes"
+      us: "Rapid, focused transformation"
     },
     {
       feature: "Approach",
       others: "Generic frameworks & workshops",
-      us: "Custom research + real buyer insights"
+      us: "Custom strategy + real buyer insights"
     },
     {
       feature: "Deliverable",
       others: "80-page deck gathering dust",
-      us: "Battle-tested messaging in market"
+      us: "Battle-tested systems in market"
     },
     {
       feature: "Team",
@@ -25,14 +25,14 @@ const Differentiation = () => {
       us: "Former founders who've been there"
     },
     {
-      feature: "Risk",
-      others: "Pay upfront, hope for results",
-      us: "Money-back if we don't deliver"
+      feature: "Support",
+      others: "Project ends, you're on your own",
+      us: "Ongoing retainer — always here for you"
     }
   ];
 
   return (
-    <section className="py-24 bg-muted/30">
+    <section id="differentiation" className="py-24 bg-muted/30">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16 reveal-on-scroll">
@@ -41,7 +41,7 @@ const Differentiation = () => {
             Not Your Typical Consultancy
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            We're ex-founders who built this because we hated traditional positioning work
+            We're ex-founders who built this because we hated traditional consulting
           </p>
         </div>
 
@@ -60,7 +60,7 @@ const Differentiation = () => {
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-2">
                   <Check className="w-6 h-6 text-primary" />
                 </div>
-                <p className="font-bold text-foreground">The Positioning Engine</p>
+                <p className="font-bold text-foreground">Elevator Consulting</p>
               </div>
             </div>
 
@@ -97,23 +97,23 @@ const Differentiation = () => {
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mt-12">
           <Card className="reveal-on-scroll border-2 text-center">
             <CardContent className="p-6">
-              <div className="text-4xl font-bold text-primary mb-2">100%</div>
-              <p className="font-medium text-foreground mb-2">Money-Back Guarantee</p>
-              <p className="text-sm text-muted-foreground">If we don't deliver, you don't pay</p>
+              <div className="text-4xl font-bold text-primary mb-2">24/7</div>
+              <p className="font-medium text-foreground mb-2">Always Available</p>
+              <p className="text-sm text-muted-foreground">Direct line to our team, anytime</p>
             </CardContent>
           </Card>
           <Card className="reveal-on-scroll border-2 text-center" style={{ transitionDelay: "100ms" }}>
             <CardContent className="p-6">
-              <div className="text-4xl font-bold text-primary mb-2">6</div>
-              <p className="font-medium text-foreground mb-2">Weeks to Launch</p>
-              <p className="text-sm text-muted-foreground">Not months of endless iterations</p>
+              <div className="text-4xl font-bold text-primary mb-2">100%</div>
+              <p className="font-medium text-foreground mb-2">Custom Solutions</p>
+              <p className="text-sm text-muted-foreground">No cookie-cutter frameworks</p>
             </CardContent>
           </Card>
           <Card className="reveal-on-scroll border-2 text-center" style={{ transitionDelay: "200ms" }}>
             <CardContent className="p-6">
-              <div className="text-4xl font-bold text-primary mb-2">$0</div>
-              <p className="font-medium text-foreground mb-2">Upfront Investment</p>
-              <p className="text-sm text-muted-foreground">Only pay when you see results</p>
+              <div className="text-4xl font-bold text-primary mb-2">∞</div>
+              <p className="font-medium text-foreground mb-2">Ongoing Partnership</p>
+              <p className="text-sm text-muted-foreground">We're here for the long haul</p>
             </CardContent>
           </Card>
         </div>
