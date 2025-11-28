@@ -38,30 +38,30 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-20 sm:py-24 lg:py-32 bg-background">
+    <section id="faq" className="py-14 sm:py-20 lg:py-32 bg-background">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="font-brand text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+          <h2 className="font-brand text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">
             Questions? We've Got Answers.
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground">
             Everything you need to know before we talk.
           </p>
         </div>
 
         {/* FAQ Accordion */}
-        <Accordion type="single" collapsible className="space-y-4">
+        <Accordion type="single" collapsible className="space-y-3 sm:space-y-4">
           {faqs.map((faq, index) => (
             <AccordionItem 
               key={index} 
               value={`item-${index}`}
-              className="bg-card border border-border rounded-xl px-6 data-[state=open]:shadow-lg transition-all duration-300"
+              className="bg-card border border-border rounded-lg sm:rounded-xl px-4 sm:px-6 data-[state=open]:shadow-lg transition-all duration-300"
             >
-              <AccordionTrigger className="text-left text-lg font-semibold text-foreground hover:no-underline py-6">
+              <AccordionTrigger className="text-left text-sm sm:text-base lg:text-lg font-semibold text-foreground hover:no-underline py-4 sm:py-6">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground text-base leading-relaxed pb-6">
+              <AccordionContent className="text-muted-foreground text-sm sm:text-base leading-relaxed pb-4 sm:pb-6">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>

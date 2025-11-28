@@ -44,9 +44,9 @@ const HeroNew = () => {
   };
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-muted/20">
-      {/* Hero SVG Illustration */}
-      <div className="absolute inset-0 flex items-center justify-center opacity-10">
+    <section className="relative min-h-[100svh] sm:min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-muted/20 pt-16 sm:pt-20">
+      {/* Hero SVG Illustration - hidden on mobile for cleaner look */}
+      <div className="absolute inset-0 hidden sm:flex items-center justify-center opacity-10">
         <svg 
           className="hero-svg w-full max-w-4xl h-auto" 
           viewBox="0 0 800 600" 
@@ -137,33 +137,34 @@ const HeroNew = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
-        <div className="space-y-8">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-8 sm:py-20">
+        <div className="space-y-5 sm:space-y-8">
           {/* Hero Headline */}
-          <h1 className="font-brand text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
+          <h1 className="font-brand text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight">
             Stop relying on agents, referrals, and luck to make your next sale.
           </h1>
           
           {/* Hero Subhead */}
-          <p className="text-2xl sm:text-3xl md:text-4xl text-foreground/90 font-semibold max-w-4xl mx-auto leading-snug">
+          <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-foreground/90 font-semibold max-w-4xl mx-auto leading-snug">
             Build a self-sustaining sales engine your team runs — without agencies.
           </p>
           
           {/* Supporting Line */}
-          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             We retrain your people, rewire your sales process, and reposition your product so revenue stops depending on chance.
           </p>
           
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center pt-4 sm:pt-6">
             <a 
               href="https://calendly.com/theabhilashkar/the-best-fifteen-minutes-of-your-life"
               target="_blank"
               rel="noopener noreferrer"
+              className="w-full sm:w-auto"
             >
               <Button 
                 size="lg" 
-                className="cta-primary bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-lg font-semibold min-h-[56px] rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                className="cta-primary w-full sm:w-auto bg-primary text-primary-foreground hover:bg-primary/90 px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg font-semibold min-h-[52px] sm:min-h-[56px] rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 Book 11 minutes
               </Button>
@@ -173,7 +174,7 @@ const HeroNew = () => {
               size="lg"
               variant="outline"
               onClick={scrollToMethodology}
-              className="px-8 py-6 text-lg font-semibold min-h-[56px] rounded-xl border-2 hover:bg-accent/10 transition-all duration-300"
+              className="w-full sm:w-auto px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg font-semibold min-h-[52px] sm:min-h-[56px] rounded-xl border-2 hover:bg-accent/10 transition-all duration-300"
             >
               See the playbook
             </Button>
@@ -182,7 +183,7 @@ const HeroNew = () => {
       </div>
 
       {/* Smooth blur merge to white */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent via-background/50 to-background backdrop-blur-sm"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-16 sm:h-32 bg-gradient-to-b from-transparent via-background/50 to-background backdrop-blur-sm"></div>
     </section>
   );
 };

@@ -487,6 +487,23 @@ All colors MUST be HSL.
     pointer-events: none;
   }
 
+  /* Gloss border animation for floating CTA */
+  @keyframes gloss-border {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .animate-gloss-border {
+    animation: gloss-border 3s ease-in-out infinite;
+  }
+
   /* Premium animation classes */
   .animate-glitter {
     animation: glitter 0.6s ease-in-out;

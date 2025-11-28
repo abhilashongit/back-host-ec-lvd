@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const FloatingCTA = () => {
@@ -17,7 +16,7 @@ const FloatingCTA = () => {
 
   return (
     <div
-      className={`fixed bottom-6 right-6 z-50 transition-all duration-500 ${
+      className={`fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 transition-all duration-500 ${
         isVisible
           ? "translate-y-0 opacity-100"
           : "translate-y-20 opacity-0 pointer-events-none"
@@ -28,13 +27,18 @@ const FloatingCTA = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Button
-          size="lg"
-          className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-6 text-base font-semibold rounded-full shadow-2xl hover:shadow-xl transition-all duration-300 hover:scale-105 group animate-[pulse-subtle_2s_ease-in-out_infinite]"
-        >
-          Book 11 minutes
-          <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-        </Button>
+        <div className="floating-cta-premium group relative">
+          {/* Gloss animated border */}
+          <div className="absolute -inset-[2px] rounded-full bg-gradient-to-r from-primary via-white/80 to-primary bg-[length:200%_100%] animate-gloss-border opacity-80"></div>
+          
+          {/* Button content */}
+          <div className="relative flex items-center gap-2 bg-background/80 backdrop-blur-xl px-5 py-3.5 sm:px-6 sm:py-4 rounded-full shadow-2xl border border-white/20 transition-all duration-300 group-hover:bg-background/90 group-hover:scale-105">
+            <span className="text-sm sm:text-base font-semibold text-foreground">
+              Book 11 minutes
+            </span>
+            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-foreground group-hover:translate-x-1 transition-transform duration-300" />
+          </div>
+        </div>
       </a>
     </div>
   );

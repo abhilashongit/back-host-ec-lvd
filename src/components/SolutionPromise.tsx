@@ -3,22 +3,39 @@ import { ArrowRight } from "lucide-react";
 
 const SolutionPromise = () => {
   return (
-    <section className="py-20 sm:py-24 lg:py-32 bg-muted/30">
+    <section className="py-14 sm:py-20 lg:py-32 bg-muted/30">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-4xl mx-auto mb-16">
-          <h2 className="font-brand text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
+        <div className="text-center max-w-4xl mx-auto mb-10 sm:mb-16">
+          <h2 className="font-brand text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">
             Turn sales into a repeatable engine — not a prayer.
           </h2>
-          <p className="text-xl sm:text-2xl text-muted-foreground leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground leading-relaxed">
             We rebuild the system: processes, playbooks, positioning, and people — so your team brings repeatable, predictable revenue.
           </p>
         </div>
 
-        {/* Flow Diagram */}
-        <div className="process-flow mb-12">
+        {/* Flow Diagram - Mobile: Vertical, Desktop: Horizontal */}
+        <div className="process-flow mb-8 sm:mb-12">
+          {/* Mobile version - vertical stack */}
+          <div className="sm:hidden flex flex-col items-center gap-4">
+            {["Process", "People", "Positioning"].map((item, index) => (
+              <div key={item} className="flex flex-col items-center">
+                <div className="w-24 h-24 rounded-full bg-white border-4 border-primary flex items-center justify-center shadow-lg">
+                  <span className="text-primary font-bold text-lg">{item}</span>
+                </div>
+                {index < 2 && (
+                  <div className="w-1 h-8 bg-foreground my-2 relative">
+                    <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-r-[6px] border-t-[8px] border-l-transparent border-r-transparent border-t-foreground"></div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop version - horizontal SVG */}
           <svg 
-            className="w-full max-w-3xl mx-auto h-48 sm:h-56" 
+            className="hidden sm:block w-full max-w-3xl mx-auto h-40 sm:h-48 lg:h-56" 
             viewBox="0 0 800 200" 
             fill="none" 
             xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +46,7 @@ const SolutionPromise = () => {
               <circle 
                 cx="150" 
                 cy="100" 
-                r="60" 
+                r="55" 
                 fill="white"
                 stroke="hsl(var(--primary))" 
                 strokeWidth="4"
@@ -39,7 +56,7 @@ const SolutionPromise = () => {
                 y="108" 
                 textAnchor="middle" 
                 fill="hsl(var(--primary))"
-                fontSize="22"
+                fontSize="20"
                 fontWeight="700"
               >
                 Process
@@ -49,7 +66,7 @@ const SolutionPromise = () => {
             {/* Connector 1 */}
             <path
               className="flow-path"
-              d="M 215 100 L 332 100"
+              d="M 210 100 L 340 100"
               stroke="hsl(var(--foreground))"
               strokeWidth="4"
               strokeLinecap="round"
@@ -61,7 +78,7 @@ const SolutionPromise = () => {
               <circle 
                 cx="400" 
                 cy="100" 
-                r="60" 
+                r="55" 
                 fill="white"
                 stroke="hsl(var(--primary))" 
                 strokeWidth="4"
@@ -71,7 +88,7 @@ const SolutionPromise = () => {
                 y="108" 
                 textAnchor="middle" 
                 fill="hsl(var(--primary))"
-                fontSize="22"
+                fontSize="20"
                 fontWeight="700"
               >
                 People
@@ -81,7 +98,7 @@ const SolutionPromise = () => {
             {/* Connector 2 */}
             <path
               className="flow-path"
-              d="M 465 100 L 582 100"
+              d="M 460 100 L 590 100"
               stroke="hsl(var(--foreground))"
               strokeWidth="4"
               strokeLinecap="round"
@@ -93,7 +110,7 @@ const SolutionPromise = () => {
               <circle 
                 cx="650" 
                 cy="100" 
-                r="60" 
+                r="55" 
                 fill="white"
                 stroke="hsl(var(--primary))" 
                 strokeWidth="4"
@@ -103,7 +120,7 @@ const SolutionPromise = () => {
                 y="98" 
                 textAnchor="middle" 
                 fill="hsl(var(--primary))"
-                fontSize="19"
+                fontSize="17"
                 fontWeight="700"
               >
                 Positioning
@@ -138,10 +155,10 @@ const SolutionPromise = () => {
           >
             <Button 
               size="lg" 
-              className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
             >
               Book 11 minutes
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </Button>
           </a>
         </div>
