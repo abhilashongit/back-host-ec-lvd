@@ -26,39 +26,39 @@ const BenefitsCards = () => {
   ];
 
   return (
-    <section className="py-20 sm:py-24 lg:py-32 bg-background">
+    <section className="py-14 sm:py-20 lg:py-32 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h3 className="font-brand text-3xl sm:text-4xl font-bold text-foreground mb-4">
+        <div className="text-center mb-10 sm:mb-16">
+          <h3 className="font-brand text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">
             What you actually get
           </h3>
         </div>
 
         {/* Benefits Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 reveal-stagger">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 reveal-stagger">
           {benefits.map((benefit) => (
             <div
               key={benefit.title}
-              className="reveal-on-scroll group relative bg-card border-2 border-border rounded-2xl p-8 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 hover:border-primary/30"
+              className="reveal-on-scroll group relative bg-card border-2 border-border rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 hover:border-primary/30"
               style={{ "--stagger": benefit.delay } as React.CSSProperties}
             >
               {/* Icon */}
-              <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
-                <benefit.icon className="w-8 h-8" />
+              <div className="mb-4 sm:mb-6 inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-lg sm:rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+                <benefit.icon className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />
               </div>
 
               {/* Content */}
-              <h4 className="font-bold text-xl mb-3 text-foreground">
+              <h4 className="font-bold text-base sm:text-lg lg:text-xl mb-2 sm:mb-3 text-foreground">
                 {benefit.title}
               </h4>
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-3 sm:mb-4">
                 {benefit.subtitle}
               </p>
 
               {/* Micro Proof */}
-              <div className="pt-4 border-t border-border">
-                <span className="text-sm font-semibold text-primary">
+              <div className="pt-3 sm:pt-4 border-t border-border">
+                <span className="text-xs sm:text-sm font-semibold text-primary">
                   {benefit.proof}
                 </span>
               </div>
