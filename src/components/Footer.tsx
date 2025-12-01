@@ -1,75 +1,60 @@
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
-import { Linkedin, Twitter } from "lucide-react";
+
 const Footer = () => {
-  return <footer className="bg-gradient-hero text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+  return (
+    <footer className="bg-gradient-hero text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-18">
         {/* Main Footer Content */}
-          <div className="text-center mb-8 sm:mb-12 lg:mb-16 animate-elegant-fade-up">
-            <h3 className="font-brand text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 animate-soft-glow">
-              Elevator Consulting
-            </h3>
-          <p className="text-white/90 mb-6 sm:mb-8 leading-relaxed max-w-3xl mx-auto text-base sm:text-lg lg:text-xl px-4 animate-elegant-fade-up animate-delay-200">
+        <div className="text-center mb-6 sm:mb-10 lg:mb-12">
+          <h3 className="font-brand text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4">
+            Elevator Consulting
+          </h3>
+          <p className="text-white/80 mb-5 sm:mb-6 leading-relaxed max-w-3xl mx-auto text-sm sm:text-base lg:text-lg px-2">
             Helping legacy B2B companies transition to new-age processes, while cleaning up and optimising revenue operations and operational processes.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           </p>
           
-          {/* Action Buttons */}
-          <div className="flex justify-center animate-elegant-fade-up animate-delay-300">
-            <a href="https://calendly.com/theabhilashkar/the-best-fifteen-minutes-of-your-life" target="_blank" rel="noopener noreferrer" style={{
-            textDecoration: 'none'
-          }}>
-              <Button className="bg-white text-consulting-dark hover:bg-white/95 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-500 hover:scale-105 hover:shadow-xl min-h-[50px] sm:min-h-[60px] rounded-xl">
+          {/* Action Button */}
+          <div className="flex justify-center">
+            <a 
+              href="https://calendly.com/theabhilashkar/the-best-fifteen-minutes-of-your-life" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Button className="bg-white text-foreground hover:bg-white/95 px-5 sm:px-7 py-2.5 sm:py-3 text-sm sm:text-base font-semibold transition-all duration-500 hover:scale-105 hover:shadow-xl min-h-[44px] sm:min-h-[52px] rounded-xl">
                 Book Your 11 Minutes
               </Button>
             </a>
           </div>
         </div>
 
-        <Separator className="bg-white/20 mb-6 sm:mb-8" />
+        <Separator className="bg-white/20 mb-5 sm:mb-6" />
 
         {/* Bottom Footer */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6 sm:gap-8">
-          <div className="text-white/80 text-sm sm:text-base order-3 md:order-1">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6">
+          <div className="text-white/70 text-xs sm:text-sm order-2 sm:order-1">
             © 2024 Elevator Consulting. All rights reserved.
           </div>
           
-          {/* Spacer for layout */}
-          <div className="order-1 md:order-2"></div>
-          
           {/* Navigation Links */}
-          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-sm sm:text-base order-2 md:order-3">
-            <a href="#" className="text-white/80 hover:text-white transition-all duration-300 hover:scale-105" onClick={() => {
-            const contactSection = document.getElementById('contact');
-            contactSection?.scrollIntoView({
-              behavior: 'smooth'
-            });
-          }}>
+          <div className="flex items-center gap-4 sm:gap-6 text-xs sm:text-sm order-1 sm:order-2">
+            <a 
+              href="#contact" 
+              className="text-white/70 hover:text-white transition-all duration-300 hover:scale-105"
+            >
               Contact Us
             </a>
-            <a href="/careers" className="text-white/80 hover:text-white transition-all duration-300 hover:scale-105">
+            <a 
+              href="/careers" 
+              className="text-white/70 hover:text-white transition-all duration-300 hover:scale-105"
+            >
               Careers
             </a>
           </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;

@@ -28,7 +28,7 @@ const ProblemDiagnosis = () => {
         {/* Section Header */}
         <div className="max-w-3xl mb-10 sm:mb-16">
           <h2 className="font-brand text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">
-            Why growth stalls even when the team works hard
+            Why growth <span className="stalls-highlight">stalls</span> even when the team works hard
           </h2>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground leading-relaxed">
             Flat conversions, invisible brand signals, risky market entries, and commission-first agents—these aren't luck problems. They're system problems.
