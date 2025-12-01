@@ -748,4 +748,70 @@ All colors MUST be HSL.
   a, button, [role="button"] {
     cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23242424' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E") 10 10, pointer;
   }
+
+  /* Repeatable word animation - ghost echoes floating up */
+  .repeatable-word-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .repeatable-main {
+    position: relative;
+    z-index: 1;
+  }
+
+  .repeatable-ghost {
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+    animation: float-up-fade 3s ease-in-out infinite;
+  }
+
+  .repeatable-ghost-1 {
+    animation-delay: 0s;
+    --float-distance: -12px;
+    --start-opacity: 0.4;
+  }
+
+  .repeatable-ghost-2 {
+    animation-delay: 0.15s;
+    --float-distance: -24px;
+    --start-opacity: 0.25;
+  }
+
+  .repeatable-ghost-3 {
+    animation-delay: 0.3s;
+    --float-distance: -36px;
+    --start-opacity: 0.15;
+  }
+
+  .repeatable-ghost-4 {
+    animation-delay: 0.45s;
+    --float-distance: -48px;
+    --start-opacity: 0.08;
+  }
+
+  @keyframes float-up-fade {
+    0%, 100% {
+      opacity: 0;
+      transform: translateY(0);
+    }
+    10% {
+      opacity: var(--start-opacity);
+    }
+    50% {
+      opacity: var(--start-opacity);
+      transform: translateY(var(--float-distance));
+    }
+    90% {
+      opacity: 0;
+      transform: translateY(var(--float-distance));
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .repeatable-ghost {
+      display: none;
+    }
+  }
 }

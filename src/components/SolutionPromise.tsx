@@ -8,7 +8,15 @@ const SolutionPromise = () => {
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-10 sm:mb-16">
           <h2 className="font-brand text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">
-            Turn sales into a repeatable engine — not a prayer.
+            Turn sales into a{" "}
+            <span className="repeatable-word-container">
+              <span className="repeatable-ghost repeatable-ghost-4">repeatable</span>
+              <span className="repeatable-ghost repeatable-ghost-3">repeatable</span>
+              <span className="repeatable-ghost repeatable-ghost-2">repeatable</span>
+              <span className="repeatable-ghost repeatable-ghost-1">repeatable</span>
+              <span className="repeatable-main">repeatable</span>
+            </span>
+            {" "}engine — not a prayer.
           </h2>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground leading-relaxed">
             We rebuild the system: processes, playbooks, positioning, and people — so your team brings repeatable, predictable revenue.
