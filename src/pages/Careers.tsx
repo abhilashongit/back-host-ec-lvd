@@ -63,16 +63,16 @@ const Careers = () => {
                   <div className="h-px bg-gradient-to-r from-consulting-subtle via-consulting-medium/20 to-consulting-subtle"></div>
                   <div className="text-consulting-medium space-y-3 text-base sm:text-lg leading-relaxed">
                     <p>
-                      Social Media & Content Intern for an F1 merchandise brand owned and operated under Elevator Consulting.
+                      Social Media & Content Intern for a niche-retail brand owned and operated under Elevator Consulting.
                     </p>
                     <p>
-                      Elevator Consulting owns several brands post-acquisition and manages standalone verticals for multiple clients—this F1 merchandise arm is one of them.
+                    Elevator Consulting invites applications for an internship position involving one of its subsidiary companies in a Revenue Generation role.
                     </p>
                     <p>
                       Title may say "intern," but the role carries significant responsibility, creative freedom, and direct impact.
                     </p>
                     <p>
-                      Internship starts December, with full flexibility for college schedules; passion is the key.
+There's no time commitment for this, what's expected is performance. 
                     </p>
                   </div>
                 </div>
@@ -80,21 +80,24 @@ const Careers = () => {
                 {/* What's Expected Section */}
                 <div className="space-y-4">
                   <h4 className="font-brand text-xl sm:text-2xl font-semibold text-consulting-dark">
-                    WHAT'S EXPECTED
+                   The intern will be given the responsibilities of
                   </h4>
                   <div className="h-px bg-gradient-to-r from-consulting-subtle via-consulting-medium/20 to-consulting-subtle"></div>
                   <div className="text-consulting-medium space-y-3 text-base sm:text-lg leading-relaxed">
                     <p>
-                      Manage social presence for a brand retailing official F1 merchandise, premium replicas, and rare retro items from the 70s–90s
+                      - Handling social media handle(s) with medium-activity engagement 
                     </p>
-                    <p>Promote hard-to-find collector-grade items</p>
-                    <p>Drive awareness, impressions, interactions, and conversions</p>
+                    <p>- Creating content as per the brand guidelines (all required software/tool subscriptions will be provided)</p>
+                    <p>- Running ads on specific social media platforms </p>
+                    <p>- Handling engagement interactions on the social media as per company requirements 
+</p>
                     <div className="pl-4 sm:pl-6 space-y-2">
                       <p className="font-semibold">KPIs:</p>
                       <ul className="list-disc pl-6 space-y-1">
-                        <li>Impressions</li>
-                        <li>Closures</li>
-                        <li>Total Value from Closures</li>
+                        <li>Total impressions generated</li>
+                        <li>CTR (Click Through Rate)</li>
+                        <li>Lead conversion % </li>
+                        <li>Ad spend efficiency %</li>
                       </ul>
                     </div>
                     <p>Be creative, consistent, and proactive</p>
@@ -118,8 +121,8 @@ const Careers = () => {
                     </ul>
                     <div className="bg-consulting-subtle/30 border border-consulting-medium/20 rounded-xl p-4 sm:p-6 mt-4">
                       <p className="font-semibold text-consulting-dark mb-2">Application Requirements:</p>
-                      <p className="mb-2">No resumes</p>
-                      <p className="mb-2">Applicants must submit a short video cover-letter</p>
+                      <p className="mb-2">Cover letters are so old fashioned. </p>
+                      <p className="mb-2">Show us who you are with a cover letter video. Your creativity is now the game-changer!</p>
                       <p className="mb-2">Upload as Unlisted on YouTube or Vimeo</p>
                       <p>Email the link to: <span className="font-semibold">careers@elevatorconsulting.in</span></p>
                     </div>
@@ -134,14 +137,16 @@ const Careers = () => {
                   <div className="h-px bg-gradient-to-r from-consulting-subtle via-consulting-medium/20 to-consulting-subtle"></div>
                   <div className="text-consulting-medium space-y-3 text-base sm:text-lg leading-relaxed">
                     <p className="font-semibold">Month 1:</p>
-                    <p className="pl-4 sm:pl-6">No monetary compensation; instead receive free merchandise</p>
+                    <p className="pl-4 sm:pl-6">For the first month, there is no planned compensation. 
+
+However, for exemplary performers, a stipend of 2,500 would be given, and a complimentary gift card from Starbucks/Myntra/Yatra/Nykaa/Air India</p>
                     
                     <p className="font-semibold mt-4">Month 2 onward:</p>
                     <ul className="list-disc pl-10 space-y-2">
-                      <li>Pay: ₹2–3k (flexible), with potential for significantly higher pay if performance is strong</li>
-                      <li>Commission per sale available</li>
+                      <li>Second month subject to company discretion - if extended, the following will apply</li>
+                      <li>A stipend amount will be deliberated with the intern's expectations in mind</li>
                       <li>A real opportunity for long-term onboarding with better pay cycles if you deliver strong results</li>
-                      <li>Certificate of completion</li>
+                      <li>Recommendation & benefits</li>
                       <li>A chance to grow with a brand and team aiming for large-scale expansion</li>
                     </ul>
                   </div>
