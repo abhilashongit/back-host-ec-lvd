@@ -18,10 +18,16 @@ const Index = () => {
   useEffect(() => {
     // Initialize all scroll-based animations
     initAllAnimations();
+    
+    // Ensure proper mobile viewport
+    const meta = document.querySelector('meta[name="viewport"]');
+    if (meta) {
+      meta.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+    }
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden">
       <Navigation />
       <FloatingCTA />
       <HeroNew />

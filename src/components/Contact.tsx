@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Mail, MapPin } from "lucide-react";
+
 const Contact = () => {
   const contactInfo = [{
     icon: Mail,
@@ -12,42 +13,59 @@ const Contact = () => {
     content: "2nd Floor - Tower 5, World Trade Centre, Pune - 411014",
     description: "Our headquarters"
   }];
-  return <section id="contact" className="py-16 sm:py-20 lg:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+  return (
+    <section id="contact" className="py-16 sm:py-20 lg:py-24 bg-muted/30 relative overflow-hidden">
+      {/* Glassmorphic background effects */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-1/4 w-48 h-48 sm:w-72 sm:h-72 bg-primary/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-48 h-48 sm:w-72 sm:h-72 bg-primary/5 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-12 sm:mb-16 lg:mb-20 animate-elegant-fade-up">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-consulting-dark mb-6 sm:mb-8 animate-soft-glow text-shadow-soft px-2 font-caption lg:text-6xl">
-            Change starts here, and now.                               <b className="font-semibold text-3xl"> </b>
+        <div className="text-center mb-10 sm:mb-14 lg:mb-18 reveal-on-scroll">
+          <h2 className="font-brand text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-4 sm:mb-6 leading-tight">
+            Change starts here, and now.
           </h2>
-          <p className="text-xl sm:text-2xl lg:text-2xl text-consulting-light max-w-4xl mx-auto leading-relaxed animate-elegant-fade-up animate-delay-200 px-4">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed px-2">
             The toughest part is to start, and the earlier you do - the better. Connect with our strategy experts 
             to discuss how we bring the 'elevate' to your campaign.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
-          {contactInfo.map((info, index) => <Card key={info.title} className="p-6 sm:p-8 lg:p-10 bg-gradient-card border-consulting-subtle hover:shadow-premium transition-all duration-500 animate-premium-scale hover:scale-105" style={{
-          animationDelay: `${index * 0.1}s`
-        }}>
-              <div className="flex items-start gap-4 sm:gap-6">
-                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-consulting-dark rounded-xl flex items-center justify-center flex-shrink-0 hover:bg-consulting-medium transition-all duration-500">
-                  <info.icon className="h-7 w-7 sm:h-8 sm:w-8 text-white" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-consulting-dark mb-2 sm:mb-3 text-lg sm:text-xl lg:text-2xl animate-elegant-fade-up animate-delay-100">
-                    {info.title}
-                  </h4>
-                  <div className="text-consulting-dark mb-2 sm:mb-3 font-medium text-base sm:text-lg animate-elegant-fade-up animate-delay-200">
-                    {info.content}
+        {/* Glassmorphic container */}
+        <div className="glass-card-contact rounded-2xl sm:rounded-3xl p-4 sm:p-8 lg:p-10 backdrop-blur-xl bg-background/60 border border-border/50 shadow-xl max-w-5xl mx-auto reveal-on-scroll">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
+            {contactInfo.map((info, index) => (
+              <Card 
+                key={info.title} 
+                className="p-5 sm:p-6 lg:p-8 bg-background/80 border-border/30 hover:shadow-lg transition-all duration-500 hover:scale-[1.02] reveal-on-scroll" 
+                style={{ "--stagger": `${index * 120}ms` } as React.CSSProperties}
+              >
+                <div className="flex items-start gap-3 sm:gap-4 lg:gap-5">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-primary rounded-xl flex items-center justify-center flex-shrink-0 hover:bg-primary/90 transition-all duration-500">
+                    <info.icon className="h-5 w-5 sm:h-6 sm:w-6 lg:h-7 lg:w-7 text-primary-foreground" />
                   </div>
-                  <div className="text-sm sm:text-base text-consulting-light animate-elegant-fade-up animate-delay-300">
-                    {info.description}
+                  <div className="min-w-0">
+                    <h4 className="font-semibold text-foreground mb-1 sm:mb-2 text-base sm:text-lg lg:text-xl">
+                      {info.title}
+                    </h4>
+                    <div className="text-foreground/90 mb-1 sm:mb-2 font-medium text-sm sm:text-base lg:text-lg break-words">
+                      {info.content}
+                    </div>
+                    <div className="text-xs sm:text-sm lg:text-base text-muted-foreground">
+                      {info.description}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Card>)}
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Contact;
