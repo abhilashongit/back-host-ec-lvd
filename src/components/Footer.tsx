@@ -14,8 +14,8 @@ const Footer = () => {
             Helping legacy B2B companies transition to new-age processes, while cleaning up and optimising revenue operations and operational processes.
           </p>
           
-          {/* Action Button */}
-          <div className="flex justify-center">
+          {/* Action Buttons */}
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4">
             <a 
               href="https://calendly.com/theabhilashkar/the-best-fifteen-minutes-of-your-life" 
               target="_blank" 
@@ -23,6 +23,11 @@ const Footer = () => {
             >
               <Button className="bg-white text-foreground hover:bg-white/95 px-5 sm:px-7 py-2.5 sm:py-3 text-sm sm:text-base font-semibold transition-all duration-500 hover:scale-105 hover:shadow-xl min-h-[44px] sm:min-h-[52px] rounded-xl">
                 Book Your 11 Minutes
+              </Button>
+            </a>
+            <a href="/careers">
+              <Button variant="outline" className="bg-transparent border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 px-5 sm:px-7 py-2.5 sm:py-3 text-sm sm:text-base font-semibold transition-all duration-500 hover:scale-105 min-h-[44px] sm:min-h-[52px] rounded-xl">
+                Join the team
               </Button>
             </a>
           </div>
@@ -43,12 +48,6 @@ const Footer = () => {
               className="text-white/70 hover:text-white transition-all duration-300 hover:scale-105"
             >
               Contact Us
-            </a>
-            <a 
-              href="/careers" 
-              className="text-white/70 hover:text-white transition-all duration-300 hover:scale-105"
-            >
-              Careers
             </a>
           </div>
         </div>
