@@ -4,11 +4,18 @@ import { ArrowRight } from "lucide-react";
 const FinalCTA = () => {
   return (
     <section className="py-16 sm:py-20 lg:py-28 bg-gradient-hero text-white overflow-hidden relative">
-      {/* Glassmorphism background effects */}
+      {/* Gradient transition from previous section */}
+      <div className="absolute top-0 left-0 right-0 h-24 sm:h-32 lg:h-48 bg-gradient-to-b from-background via-primary/30 to-transparent pointer-events-none"></div>
+      
+      {/* Gradient transition to next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 sm:h-32 lg:h-48 bg-gradient-to-b from-transparent via-primary/30 to-muted/50 pointer-events-none"></div>
+      
+      {/* Glassmorphism background effects with bokeh */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 -left-20 w-64 h-64 sm:w-96 sm:h-96 bg-white/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 -right-20 w-64 h-64 sm:w-96 sm:h-96 bg-white/5 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 sm:w-[500px] sm:h-[500px] bg-white/5 rounded-full blur-3xl"></div>
+        <div className="bokeh-orb absolute top-1/4 -left-20 w-64 h-64 sm:w-96 sm:h-96 bg-white/10 rounded-full blur-3xl"></div>
+        <div className="bokeh-orb absolute bottom-1/4 -right-20 w-64 h-64 sm:w-96 sm:h-96 bg-white/5 rounded-full blur-3xl" style={{ animationDelay: '4s' }}></div>
+        <div className="bokeh-orb absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 sm:w-[500px] sm:h-[500px] bg-white/5 rounded-full blur-3xl" style={{ animationDelay: '2s' }}></div>
+        <div className="bokeh-orb absolute top-1/3 right-1/3 w-48 h-48 sm:w-72 sm:h-72 bg-white/8 rounded-full blur-3xl" style={{ animationDelay: '6s' }}></div>
       </div>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

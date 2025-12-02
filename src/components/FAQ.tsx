@@ -38,8 +38,16 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-14 sm:py-20 lg:py-32 bg-background">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="faq" className="py-14 sm:py-20 lg:py-32 bg-background relative overflow-hidden">
+      {/* Gradient transition to next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 sm:h-48 lg:h-64 bg-gradient-to-b from-transparent via-primary/5 to-primary/20 pointer-events-none"></div>
+      
+      {/* Subtle bokeh effects */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="bokeh-orb absolute top-1/4 left-[10%] w-32 h-32 sm:w-48 sm:h-48 bg-primary/8 rounded-full blur-3xl"></div>
+        <div className="bokeh-orb absolute bottom-1/3 right-[15%] w-24 h-24 sm:w-40 sm:h-40 bg-accent/10 rounded-full blur-3xl" style={{ animationDelay: '2s' }}></div>
+      </div>
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <h2 className="font-brand text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">

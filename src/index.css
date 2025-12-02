@@ -814,4 +814,72 @@ All colors MUST be HSL.
       display: none;
     }
   }
+
+  /* Navigation CTA gloss animation */
+  @keyframes nav-gloss-sweep {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(200%);
+    }
+  }
+
+  .animate-nav-gloss {
+    animation: nav-gloss-sweep 3s ease-in-out infinite;
+  }
+
+  .nav-gloss-text {
+    background: linear-gradient(90deg, 
+      hsl(var(--primary-foreground)) 0%, 
+      hsl(var(--primary-foreground)) 40%, 
+      hsl(0 0% 100% / 0.9) 50%, 
+      hsl(var(--primary-foreground)) 60%, 
+      hsl(var(--primary-foreground)) 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: text-shine 3s ease-in-out infinite;
+  }
+
+  @keyframes text-shine {
+    0% {
+      background-position: 200% center;
+    }
+    100% {
+      background-position: -200% center;
+    }
+  }
+
+  /* Bokeh floating orb animation */
+  @keyframes bokeh-float {
+    0%, 100% {
+      transform: translate(0, 0) scale(1);
+      opacity: 0.6;
+    }
+    25% {
+      transform: translate(10px, -15px) scale(1.05);
+      opacity: 0.8;
+    }
+    50% {
+      transform: translate(-5px, -10px) scale(0.95);
+      opacity: 0.5;
+    }
+    75% {
+      transform: translate(15px, 5px) scale(1.02);
+      opacity: 0.7;
+    }
+  }
+
+  .bokeh-orb {
+    animation: bokeh-float 12s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-nav-gloss,
+    .nav-gloss-text,
+    .bokeh-orb {
+      animation: none !important;
+    }
+  }
 }

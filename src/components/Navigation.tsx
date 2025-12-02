@@ -69,10 +69,8 @@ const Navigation = () => {
               <Button 
                 className="bg-consulting-dark hover:bg-consulting-medium text-white px-4 lg:px-6 py-2 text-sm lg:text-base font-semibold transition-all duration-500 relative overflow-hidden group hover:scale-105 hover:shadow-premium"
               >
-                <span className="relative z-10">Book 11 minutes</span>
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-glitter"></div>
-                </div>
+                <span className="relative z-10 nav-gloss-text">Unlock sales clarity</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-nav-gloss"></div>
               </Button>
             </a>
           </div>
@@ -114,10 +112,8 @@ const Navigation = () => {
                   <Button 
                     className="w-full bg-consulting-dark hover:bg-consulting-medium text-white font-semibold transition-all duration-500 relative overflow-hidden group py-2.5 hover:shadow-premium text-sm sm:text-base"
                   >
-                    <span className="relative z-10">Book 11 minutes</span>
-                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-glitter"></div>
-                    </div>
+                    <span className="relative z-10 nav-gloss-text">Unlock sales clarity</span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-nav-gloss"></div>
                   </Button>
                 </a>
               </div>

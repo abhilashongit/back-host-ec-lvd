@@ -6,8 +6,15 @@ const FloatingCTA = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show after scrolling 600px (past hero)
-      setIsVisible(window.scrollY > 600);
+      const footer = document.querySelector('footer');
+      const footerTop = footer ? footer.getBoundingClientRect().top : Infinity;
+      const windowHeight = window.innerHeight;
+      
+      // Show after scrolling 600px (past hero) but hide when footer is visible
+      const pastHero = window.scrollY > 600;
+      const beforeFooter = footerTop > windowHeight;
+      
+      setIsVisible(pastHero && beforeFooter);
     };
 
     window.addEventListener("scroll", handleScroll);
