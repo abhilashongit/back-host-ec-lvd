@@ -27,7 +27,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden">
+    <div className="min-h-screen min-h-[100dvh] w-full max-w-full overflow-x-hidden">
       <Navigation />
       <FloatingCTA />
       <HeroNew />
