@@ -172,23 +172,8 @@ const HeroNew = () => {
             
             <button 
               onClick={scrollToMethodology}
-              className="playbook-btn w-full sm:w-auto relative px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg font-semibold min-h-[52px] sm:min-h-[56px] rounded-xl bg-transparent text-foreground transition-all duration-300 hover:bg-accent/5 overflow-hidden"
+              className="playbook-btn w-full sm:w-auto relative px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg font-semibold min-h-[52px] sm:min-h-[56px] rounded-xl bg-transparent text-foreground transition-all duration-300 hover:bg-accent/5 border-2 border-foreground/30 hover:border-foreground/50"
             >
-              {/* Animated stroke border */}
-              <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <rect 
-                  className="playbook-stroke"
-                  x="1%" 
-                  y="2%" 
-                  width="98%" 
-                  height="96%" 
-                  rx="12"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  vectorEffect="non-scaling-stroke"
-                />
-              </svg>
               <span className="relative z-10">See the playbook</span>
             </button>
           </div>
