@@ -1006,6 +1006,39 @@ All colors MUST be HSL.
     }
   }
 
+  /* ============================================
+     FLOATING ICONS BACKGROUND
+     ============================================ */
+  
+  @keyframes floating-drift {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+      transform: translate(30px, -40px) rotate(15deg);
+    }
+    50% {
+      transform: translate(-20px, -80px) rotate(-10deg);
+    }
+    75% {
+      transform: translate(40px, -40px) rotate(20deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+  }
+  
+  .floating-icon-drift {
+    animation: floating-drift linear infinite;
+    will-change: transform;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .floating-icon-drift {
+      animation: none !important;
+    }
+  }
+
   .bokeh-orb {
     animation: bokeh-float 12s ease-in-out infinite;
   }
