@@ -3,23 +3,15 @@ import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { ChevronDown } from "lucide-react";
-
 const Careers = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
-
   useEffect(() => {
     document.title = "Careers | Elevator Consulting";
   }, []);
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-consulting-light via-white to-consulting-subtle">
+  return <div className="min-h-screen bg-gradient-to-br from-consulting-light via-white to-consulting-subtle">
       <Navigation />
 
       {/* Hero Section */}
@@ -28,9 +20,9 @@ const Careers = () => {
           <h1 className="font-brand text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-consulting-dark mb-6 sm:mb-8 animate-elegant-fade-up">
             CAREERS
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-consulting-medium max-w-3xl mx-auto leading-relaxed animate-elegant-fade-up animate-delay-200">
-            Join the team at Elevator Consulting and grow in every aspect of your career.
-          </p>
+          <p className="text-lg sm:text-xl md:text-2xl text-consulting-medium max-w-3xl mx-auto leading-relaxed animate-elegant-fade-up animate-delay-200">At Elevator Consulting, we're always looking for motivated, passionate individuals to join our driving force. With a flexible working policy and leadership that's in touch with all rungs - we're in this togetherr.
+
+We look forward to hearing from you.</p>
         </div>
       </section>
 
@@ -44,11 +36,7 @@ const Careers = () => {
                   <h3 className="font-brand text-xl sm:text-2xl md:text-3xl font-semibold text-consulting-dark text-left">
                     Social Media & Content Intern (EC Subsidiary Organization)
                   </h3>
-                  <ChevronDown
-                    className={`h-6 w-6 sm:h-8 sm:w-8 text-consulting-medium transition-transform duration-500 flex-shrink-0 ml-4 ${
-                      isOpen ? "rotate-180" : ""
-                    }`}
-                  />
+                  <ChevronDown className={`h-6 w-6 sm:h-8 sm:w-8 text-consulting-medium transition-transform duration-500 flex-shrink-0 ml-4 ${isOpen ? "rotate-180" : ""}`} />
                 </div>
               </div>
             </CollapsibleTrigger>
@@ -90,7 +78,7 @@ There's no time commitment for this, what's expected is performance.
                     <p>- Creating content as per the brand guidelines (all required software/tool subscriptions will be provided)</p>
                     <p>- Running ads on specific social media platforms </p>
                     <p>- Handling engagement interactions on the social media as per company requirements 
-</p>
+                  </p>
                     <div className="pl-4 sm:pl-6 space-y-2">
                       <p className="font-semibold">KPIs:</p>
                       <ul className="list-disc pl-6 space-y-1">
@@ -160,33 +148,20 @@ However, for exemplary performers, a stipend of 2,500 would be given, and a comp
       {/* Apply Section */}
       <section className="py-12 sm:py-16 px-4">
         <div className="max-w-2xl mx-auto text-center space-y-6">
-          {!showSuccess ? (
-            <>
-              <a
-                href="mailto:careers@elevatorconsulting.in"
-                className="inline-block"
-                onClick={() => setShowSuccess(true)}
-              >
-                <Button
-                  size="lg"
-                  className="bg-black text-white px-8 sm:px-12 py-6 sm:py-8 text-lg sm:text-xl font-semibold rounded-2xl relative overflow-hidden group hover:scale-105 transition-all duration-500 shine-button-glossy shadow-premium hover:shadow-premium-lg"
-                >
+          {!showSuccess ? <>
+              <a href="mailto:careers@elevatorconsulting.in" className="inline-block" onClick={() => setShowSuccess(true)}>
+                <Button size="lg" className="bg-black text-white px-8 sm:px-12 py-6 sm:py-8 text-lg sm:text-xl font-semibold rounded-2xl relative overflow-hidden group hover:scale-105 transition-all duration-500 shine-button-glossy shadow-premium hover:shadow-premium-lg">
                   <span className="relative z-10">Apply Now</span>
                 </Button>
               </a>
               
               <p className="text-consulting-medium text-base sm:text-lg">
                 In case the button doesn't work:<br />
-                <a
-                  href="mailto:careers@elevatorconsulting.in"
-                  className="font-semibold text-consulting-dark hover:text-consulting-medium transition-colors duration-300 hover-glow"
-                >
+                <a href="mailto:careers@elevatorconsulting.in" className="font-semibold text-consulting-dark hover:text-consulting-medium transition-colors duration-300 hover-glow">
                   careers@elevatorconsulting.in
                 </a>
               </p>
-            </>
-          ) : (
-            <div className="bg-white/80 backdrop-blur-xl border border-consulting-subtle/30 rounded-2xl p-8 sm:p-12 shadow-premium animate-elegant-fade-up">
+            </> : <div className="bg-white/80 backdrop-blur-xl border border-consulting-subtle/30 rounded-2xl p-8 sm:p-12 shadow-premium animate-elegant-fade-up">
               <div className="text-6xl mb-6">😊</div>
               <h3 className="font-brand text-2xl sm:text-3xl font-semibold text-consulting-dark mb-4">
                 Success!
@@ -196,10 +171,7 @@ However, for exemplary performers, a stipend of 2,500 would be given, and a comp
               </p>
               
               <Link to="/">
-                <Button
-                  size="lg"
-                  className="bg-black text-white px-8 py-4 text-base sm:text-lg font-semibold rounded-xl relative overflow-hidden group hover:scale-105 transition-all duration-500 shine-button-glossy shadow-premium hover:shadow-premium-lg mb-6"
-                >
+                <Button size="lg" className="bg-black text-white px-8 py-4 text-base sm:text-lg font-semibold rounded-xl relative overflow-hidden group hover:scale-105 transition-all duration-500 shine-button-glossy shadow-premium hover:shadow-premium-lg mb-6">
                   <span className="relative z-10">Back to Homepage</span>
                 </Button>
               </Link>
@@ -210,22 +182,16 @@ However, for exemplary performers, a stipend of 2,500 would be given, and a comp
                 </p>
                 <p className="text-consulting-medium text-sm sm:text-base">
                   Here's the mail ID:{" "}
-                  <a
-                    href="mailto:careers@elevatorconsulting.in"
-                    className="font-semibold text-consulting-dark hover:text-consulting-medium transition-colors duration-300 hover-glow"
-                  >
+                  <a href="mailto:careers@elevatorconsulting.in" className="font-semibold text-consulting-dark hover:text-consulting-medium transition-colors duration-300 hover-glow">
                     careers@elevatorconsulting.in
                   </a>
                 </p>
               </div>
-            </div>
-          )}
+            </div>}
         </div>
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Careers;
