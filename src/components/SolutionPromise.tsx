@@ -1,7 +1,33 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronRight } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 const SolutionPromise = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [animationComplete, setAnimationComplete] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          // Trigger gloss after waterfall completes (1.5s)
+          setTimeout(() => setAnimationComplete(true), 1500);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const items = ["Process", "People", "Positioning"];
+
   return (
     <section className="py-14 sm:py-20 lg:py-32 bg-muted/30">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,135 +49,51 @@ const SolutionPromise = () => {
           </p>
         </div>
 
-        {/* Flow Diagram - Mobile: Vertical, Desktop: Horizontal */}
-        <div className="process-flow mb-8 sm:mb-12">
+        {/* Flow Diagram */}
+        <div ref={sectionRef} className="process-flow mb-8 sm:mb-12">
           {/* Mobile version - vertical stack */}
-          <div className="sm:hidden flex flex-col items-center gap-4">
-            {["Process", "People", "Positioning"].map((item, index) => (
+          <div className="sm:hidden flex flex-col items-center gap-3">
+            {items.map((item, index) => (
               <div key={item} className="flex flex-col items-center">
-                <div className="w-24 h-24 rounded-full bg-white border-4 border-primary flex items-center justify-center shadow-lg">
-                  <span className="text-primary font-bold text-lg">{item}</span>
+                <div 
+                  className={`flow-pill ${isVisible ? 'flow-pill-visible' : ''} ${animationComplete ? 'flow-pill-gloss' : ''}`}
+                  style={{ animationDelay: `${index * 0.3}s` }}
+                >
+                  <span className="text-foreground font-semibold text-base">{item}</span>
                 </div>
                 {index < 2 && (
-                  <div className="w-1 h-8 bg-foreground my-2 relative">
-                    <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-r-[6px] border-t-[8px] border-l-transparent border-r-transparent border-t-foreground"></div>
+                  <div 
+                    className={`flow-chevron-vertical ${isVisible ? 'flow-chevron-visible' : ''}`}
+                    style={{ animationDelay: `${index * 0.3 + 0.2}s` }}
+                  >
+                    <ChevronRight className="w-6 h-6 text-foreground/70 rotate-90 flow-chevron-animate" />
                   </div>
                 )}
               </div>
             ))}
           </div>
 
-          {/* Desktop version - horizontal SVG */}
-          <svg 
-            className="hidden sm:block w-full max-w-3xl mx-auto h-40 sm:h-48 lg:h-56" 
-            viewBox="0 0 800 200" 
-            fill="none" 
-            xmlns="http://www.w3.org/2000/svg"
-            aria-label="Three-step process flow"
-          >
-            {/* Node 1 - Process */}
-            <g className="reveal-on-scroll">
-              <circle 
-                cx="150" 
-                cy="100" 
-                r="55" 
-                fill="white"
-                stroke="hsl(var(--primary))" 
-                strokeWidth="4"
-              />
-              <text 
-                x="150" 
-                y="108" 
-                textAnchor="middle" 
-                fill="hsl(var(--primary))"
-                fontSize="20"
-                fontWeight="700"
-              >
-                Process
-              </text>
-            </g>
-
-            {/* Connector 1 */}
-            <path
-              className="flow-path"
-              d="M 210 100 L 340 100"
-              stroke="hsl(var(--foreground))"
-              strokeWidth="4"
-              strokeLinecap="round"
-              markerEnd="url(#arrowhead)"
-            />
-
-            {/* Node 2 - People */}
-            <g className="reveal-on-scroll">
-              <circle 
-                cx="400" 
-                cy="100" 
-                r="55" 
-                fill="white"
-                stroke="hsl(var(--primary))" 
-                strokeWidth="4"
-              />
-              <text 
-                x="400" 
-                y="108" 
-                textAnchor="middle" 
-                fill="hsl(var(--primary))"
-                fontSize="20"
-                fontWeight="700"
-              >
-                People
-              </text>
-            </g>
-
-            {/* Connector 2 */}
-            <path
-              className="flow-path"
-              d="M 460 100 L 590 100"
-              stroke="hsl(var(--foreground))"
-              strokeWidth="4"
-              strokeLinecap="round"
-              markerEnd="url(#arrowhead)"
-            />
-
-            {/* Node 3 - Positioning */}
-            <g className="reveal-on-scroll">
-              <circle 
-                cx="650" 
-                cy="100" 
-                r="55" 
-                fill="white"
-                stroke="hsl(var(--primary))" 
-                strokeWidth="4"
-              />
-              <text 
-                x="650" 
-                y="98" 
-                textAnchor="middle" 
-                fill="hsl(var(--primary))"
-                fontSize="17"
-                fontWeight="700"
-              >
-                Positioning
-              </text>
-            </g>
-
-            {/* Arrow marker definition */}
-            <defs>
-              <marker
-                id="arrowhead"
-                markerWidth="10"
-                markerHeight="10"
-                refX="9"
-                refY="3"
-                orient="auto"
-              >
-                <polygon
-                  points="0 0, 10 3, 0 6"
-                  fill="hsl(var(--foreground))"
-                />
-              </marker>
-            </defs>
-          </svg>
+          {/* Desktop version - horizontal */}
+          <div className="hidden sm:flex items-center justify-center gap-0">
+            {items.map((item, index) => (
+              <div key={item} className="flex items-center">
+                <div 
+                  className={`flow-pill ${isVisible ? 'flow-pill-visible' : ''} ${animationComplete ? 'flow-pill-gloss' : ''}`}
+                  style={{ animationDelay: `${index * 0.3}s` }}
+                >
+                  <span className="text-foreground font-semibold text-lg lg:text-xl">{item}</span>
+                </div>
+                {index < 2 && (
+                  <div 
+                    className={`flow-chevron ${isVisible ? 'flow-chevron-visible' : ''}`}
+                    style={{ animationDelay: `${index * 0.3 + 0.2}s` }}
+                  >
+                    <ChevronRight className="w-8 h-8 lg:w-10 lg:h-10 text-foreground/70 flow-chevron-animate" />
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* CTA */}
