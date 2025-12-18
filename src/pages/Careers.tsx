@@ -20,9 +20,7 @@ const Careers = () => {
           <h1 className="font-brand text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-consulting-dark mb-6 sm:mb-8 animate-elegant-fade-up">
             CAREERS
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-consulting-medium max-w-3xl mx-auto leading-relaxed animate-elegant-fade-up animate-delay-200">At Elevator Consulting, we're always looking for motivated, passionate individuals to join our driving force. With a flexible working policy and leadership that's in touch with all rungs - we're in this togetherr.
-
-We look forward to hearing from you.</p>
+          <p className="text-lg sm:text-xl md:text-2xl text-consulting-medium max-w-3xl mx-auto leading-relaxed animate-elegant-fade-up animate-delay-200">At Elevator Consulting, we're always looking for motivated, passionate individuals to join our driving force. With a flexible working policy and leadership that's in touch with all rungs - we're in this together. We look forward to hearing from you.</p>
         </div>
       </section>
 
