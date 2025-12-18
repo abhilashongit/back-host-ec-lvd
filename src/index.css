@@ -1010,11 +1010,139 @@ All colors MUST be HSL.
     animation: bokeh-float 12s ease-in-out infinite;
   }
 
+  /* ============================================
+     FLOW DIAGRAM - WATERFALL ANIMATION
+     ============================================ */
+  
+  .flow-pill {
+    @apply relative px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-5 bg-background border-2 border-foreground/20 rounded-2xl shadow-md;
+    opacity: 0;
+    transform: translateX(-40px);
+    overflow: hidden;
+  }
+  
+  .flow-pill-visible {
+    animation: waterfall-slide 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  
+  @keyframes waterfall-slide {
+    0% {
+      opacity: 0;
+      transform: translateX(-40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Gloss sweep effect after waterfall completes */
+  .flow-pill-gloss::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      hsl(var(--primary) / 0.15),
+      hsl(var(--primary) / 0.3),
+      hsl(var(--primary) / 0.15),
+      transparent
+    );
+    animation: gloss-sweep 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  
+  @keyframes gloss-sweep {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 150%;
+    }
+  }
+  
+  /* Chevron animations */
+  .flow-chevron,
+  .flow-chevron-vertical {
+    opacity: 0;
+    transform: scale(0.8);
+    @apply mx-3 sm:mx-4 lg:mx-6;
+  }
+  
+  .flow-chevron-vertical {
+    @apply my-2;
+  }
+  
+  .flow-chevron-visible {
+    animation: chevron-appear 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  
+  @keyframes chevron-appear {
+    0% {
+      opacity: 0;
+      transform: scale(0.8) translateX(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateX(0);
+    }
+  }
+  
+  .flow-chevron-animate {
+    animation: chevron-pulse 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    animation-delay: 1.5s;
+  }
+  
+  @keyframes chevron-pulse {
+    0%, 100% {
+      transform: translateX(0) rotate(0deg);
+      opacity: 0.7;
+    }
+    50% {
+      transform: translateX(4px) rotate(0deg);
+      opacity: 1;
+    }
+  }
+  
+  .flow-chevron-vertical .flow-chevron-animate {
+    animation: chevron-pulse-vertical 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    animation-delay: 1.5s;
+  }
+  
+  @keyframes chevron-pulse-vertical {
+    0%, 100% {
+      transform: translateY(0) rotate(90deg);
+      opacity: 0.7;
+    }
+    50% {
+      transform: translateY(4px) rotate(90deg);
+      opacity: 1;
+    }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .animate-nav-gloss,
     .nav-gloss-text,
-    .bokeh-orb {
+    .bokeh-orb,
+    .flow-pill-visible,
+    .flow-pill-gloss::after,
+    .flow-chevron-visible,
+    .flow-chevron-animate {
       animation: none !important;
+    }
+    
+    .flow-pill {
+      opacity: 1;
+      transform: none;
+    }
+    
+    .flow-chevron,
+    .flow-chevron-vertical {
+      opacity: 1;
+      transform: none;
     }
   }
 }
