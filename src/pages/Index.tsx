@@ -12,6 +12,7 @@ import FinalCTA from "@/components/FinalCTA";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
+import FloatingIconsBackground from "@/components/FloatingIconsBackground";
 import { initAllAnimations } from "@/utils/animations";
 
 const Index = () => {
@@ -27,7 +28,8 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen min-h-[100dvh] w-full max-w-full overflow-x-hidden">
+    <div className="min-h-screen min-h-[100dvh] w-full max-w-full overflow-x-hidden relative">
+      <FloatingIconsBackground />
       <Navigation />
       <FloatingCTA />
       <HeroNew />
