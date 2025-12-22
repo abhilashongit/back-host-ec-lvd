@@ -27,21 +27,21 @@ const News = () => {
         <div className="max-w-5xl mx-auto">
           <div className="grid gap-10">
             {/* Press Release Card 1 */}
-            <Card className="overflow-hidden rounded-2xl border-0 shadow-premium bg-card transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-premium-lg cursor-pointer">
-              <CardContent className="p-0">
-                <div className="relative aspect-[16/9] overflow-hidden rounded-t-2xl">
+            <Card className="max-w-md overflow-hidden rounded-2xl border-0 shadow-premium bg-card transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-premium-lg cursor-pointer">
+              <CardContent className="p-5">
+                <div className="relative aspect-[16/9] overflow-hidden rounded-xl">
                   <img 
                     src={citeelEcPress} 
                     alt="Citeel X EC partnership announcement" 
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="p-8 md:p-10">
-                  <p className="text-sm text-consulting-medium mb-4 font-caption">22/12/2025</p>
-                  <h2 className="font-brand text-3xl md:text-4xl font-bold text-consulting-dark mb-2">
+                <div className="pt-5">
+                  <p className="text-xs text-consulting-medium mb-3 font-caption">22/12/2025</p>
+                  <h2 className="font-brand text-xl md:text-2xl font-bold text-consulting-dark mb-1">
                     NAMASTE INDIA
                   </h2>
-                  <p className="font-caption text-xl md:text-2xl text-consulting-medium">
+                  <p className="font-caption text-base md:text-lg text-consulting-medium">
                     Citeel X EC
                   </p>
                 </div>
