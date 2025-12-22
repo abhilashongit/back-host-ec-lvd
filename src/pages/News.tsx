@@ -1,6 +1,8 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingIconsBackground from "@/components/FloatingIconsBackground";
+import { Card, CardContent } from "@/components/ui/card";
+import citeelEcPress from "@/assets/citeel-ec-press.webp";
 
 const News = () => {
   return (
@@ -20,12 +22,32 @@ const News = () => {
         </div>
       </section>
 
-      {/* Content Placeholder */}
+      {/* Press Releases */}
       <section className="relative py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-center text-consulting-medium text-lg">
-            Press releases coming soon.
-          </p>
+        <div className="max-w-5xl mx-auto">
+          <div className="grid gap-10">
+            {/* Press Release Card 1 */}
+            <Card className="overflow-hidden rounded-2xl border-0 shadow-premium bg-card transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-premium-lg cursor-pointer">
+              <CardContent className="p-0">
+                <div className="relative aspect-[16/9] overflow-hidden rounded-t-2xl">
+                  <img 
+                    src={citeelEcPress} 
+                    alt="Citeel X EC partnership announcement" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-8 md:p-10">
+                  <p className="text-sm text-consulting-medium mb-4 font-caption">22/12/2025</p>
+                  <h2 className="font-brand text-3xl md:text-4xl font-bold text-consulting-dark mb-2">
+                    NAMASTE INDIA
+                  </h2>
+                  <p className="font-caption text-xl md:text-2xl text-consulting-medium">
+                    Citeel X EC
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
