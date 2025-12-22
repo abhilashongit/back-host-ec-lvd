@@ -43,7 +43,7 @@ const NewsArticle = () => {
           </header>
 
           {/* Article Body */}
-          <div className="prose prose-lg prose-invert max-w-none animate-article-body text-gray-200">
+          <div className="prose prose-lg prose-invert max-w-none animate-article-body text-white-200">
 
 
             <p className="font-caption text-consulting-dark/85 text-lg leading-relaxed mb-8">
