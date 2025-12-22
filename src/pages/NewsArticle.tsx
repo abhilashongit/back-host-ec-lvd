@@ -4,16 +4,12 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingIconsBackground from "@/components/FloatingIconsBackground";
 import citeelEcPress from "@/assets/citeel-ec-press.webp";
-
 const NewsArticle = () => {
   const navigate = useNavigate();
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  return (
-    <div className="min-h-screen bg-black relative overflow-hidden text-white">
+  return <div className="min-h-screen bg-black relative overflow-hidden text-white">
       <FloatingIconsBackground />
       <Navigation />
       
@@ -23,22 +19,18 @@ const NewsArticle = () => {
           
           {/* Hero Image */}
           <div className="relative aspect-[16/9] overflow-hidden rounded-2xl mb-10 animate-article-image">
-            <img 
-              src={citeelEcPress} 
-              alt="Citeel X EC partnership announcement" 
-              className="w-full h-full object-cover"
-            />
+            <img src={citeelEcPress} alt="Citeel X EC partnership announcement" className="w-full h-full object-cover" />
           </div>
 
           {/* Article Header */}
           <header className="mb-10 animate-article-header">
             <h1 className="font-brand text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight bg-gradient-to-r from-gray-400 via-gray-300 to-gray-500 bg-clip-text text-transparent">
   Namaste India — Citeel X Elevator Consulting
-</h1>
+          </h1>
 
-<h4 className="font-brand text-lg sm:text-xl bg-gradient-to-r from-gray-400 via-gray-300 to-gray-500 bg-clip-text text-transparent">
+          <h4 className="font-brand text-lg sm:text-xl bg-gradient-to-r from-gray-400 via-gray-300 to-gray-500 bg-clip-text text-transparent">
   Pune / Amsterdam — December 22, 2025
-</h4>
+          </h4>
 
           </header>
 
@@ -46,7 +38,7 @@ const NewsArticle = () => {
           <div className="prose prose-lg prose-invert max-w-none animate-article-body text-white-200">
 
 
-            <p className="font-caption text-consulting-dark/85 text-lg leading-relaxed mb-8">
+            <p className="font-caption text-lg leading-relaxed mb-8 text-muted-foreground">
               Citeel, a global provider of advanced cybersecurity and data solutions, has formally engaged Elevator Consulting as its strategic advisory partner to assess the feasibility and strategic approach for future operations in the Indian market. This initiative represents a structured, analytical first phase intended to evaluate market, regulatory frameworks, operational considerations, and potential entry pathways ahead of any formal presence in India.
             </p>
 
@@ -106,10 +98,7 @@ const NewsArticle = () => {
 
           {/* Back Button */}
           <div className="mt-12 animate-article-body">
-            <button 
-              onClick={() => navigate('/news')}
-              className="font-caption text-consulting-accent hover:text-consulting-dark transition-colors duration-300 flex items-center gap-2"
-            >
+            <button onClick={() => navigate('/news')} className="font-caption text-consulting-accent hover:text-consulting-dark transition-colors duration-300 flex items-center gap-2">
               ← Back to News
             </button>
           </div>
@@ -117,8 +106,6 @@ const NewsArticle = () => {
       </article>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default NewsArticle;
