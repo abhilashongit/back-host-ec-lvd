@@ -43,7 +43,8 @@ const NewsArticle = () => {
           </header>
 
           {/* Article Body */}
-          <div className="prose prose-lg prose-invert max-w-none animate-article-body">
+          <div className="prose prose-lg prose-invert max-w-none animate-article-body text-gray-200">
+
 
             <p className="font-caption text-consulting-dark/85 text-lg leading-relaxed mb-8">
               Citeel, a global provider of advanced cybersecurity and data solutions, has formally engaged Elevator Consulting as its strategic advisory partner to assess the feasibility and strategic approach for future operations in the Indian market. This initiative represents a structured, analytical first phase intended to evaluate market, regulatory frameworks, operational considerations, and potential entry pathways ahead of any formal presence in India.
