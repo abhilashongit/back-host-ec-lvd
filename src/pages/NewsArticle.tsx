@@ -33,8 +33,8 @@ const NewsArticle = () => {
           {/* Article Header */}
           <header className="mb-10 animate-article-header">
             <h1 className="font-brand text-4xl sm:text-5xl md:text-6xl font-bold text-consulting-dark mb-6 leading-tight">
-              Namaste India — Citeel X Elevator Consulting
-            </h1>
+              Namaste India</h1> <br><h2> Citeel X Elevator Consulting</h2></br>
+            
             <h4 className="font-brand text-lg sm:text-xl text-consulting-medium">
               Pune / Amsterdam — December 22, 2025
             </h4>
