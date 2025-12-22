@@ -13,7 +13,7 @@ const NewsArticle = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-consulting-light relative overflow-hidden">
+    <div className="min-h-screen bg-black relative overflow-hidden text-white">
       <FloatingIconsBackground />
       <Navigation />
       
@@ -32,16 +32,19 @@ const NewsArticle = () => {
 
           {/* Article Header */}
           <header className="mb-10 animate-article-header">
-            <h1 className="font-brand text-4xl sm:text-5xl md:text-6xl font-bold text-consulting-dark mb-6 leading-tight">
-              Namaste India — Citeel X Elevator Consulting
-            </h1>
-            <h4 className="font-brand text-lg sm:text-xl text-consulting-medium">
-              Pune / Amsterdam — December 22, 2025
-            </h4>
+            <h1 className="font-brand text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight bg-gradient-to-r from-gray-400 via-gray-300 to-gray-500 bg-clip-text text-transparent">
+  Namaste India — Citeel X Elevator Consulting
+</h1>
+
+<h4 className="font-brand text-lg sm:text-xl bg-gradient-to-r from-gray-400 via-gray-300 to-gray-500 bg-clip-text text-transparent">
+  Pune / Amsterdam — December 22, 2025
+</h4>
+
           </header>
 
           {/* Article Body */}
-          <div className="prose prose-lg max-w-none animate-article-body">
+          <div className="prose prose-lg prose-invert max-w-none animate-article-body">
+
             <p className="font-caption text-consulting-dark/85 text-lg leading-relaxed mb-8">
               Citeel, a global provider of advanced cybersecurity and data solutions, has formally engaged Elevator Consulting as its strategic advisory partner to assess the feasibility and strategic approach for future operations in the Indian market. This initiative represents a structured, analytical first phase intended to evaluate market, regulatory frameworks, operational considerations, and potential entry pathways ahead of any formal presence in India.
             </p>
@@ -72,7 +75,8 @@ const NewsArticle = () => {
             <h3 className="font-caption font-bold text-consulting-dark text-xl mb-4">
               Leadership Commentary
             </h3>
-            <blockquote className="border-l-4 border-consulting-accent pl-6 py-4 my-8 bg-consulting-dark/5 rounded-r-xl">
+           <blockquote className="border-l-4 border-gray-500 pl-6 py-4 my-8 bg-white/5 rounded-r-xl">
+
               <p className="font-caption text-consulting-dark/90 text-lg leading-relaxed italic">
                 "Citeel's solutions are cutting edge and offer a new dimension of data securitization that will play right into the emerging markets' needs in India. In today's data-centric life, security is a pivotal backbone."
               </p>
