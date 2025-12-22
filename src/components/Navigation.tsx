@@ -12,6 +12,7 @@ const Navigation = () => {
     { label: "How We're Different", href: "#differentiation" },
     { label: "Pricing", href: "#pricing" },
     { label: "FAQ", href: "#faq" },
+    { label: "News", href: "/news" },
     { label: "Contact", href: "#contact" },
   ];
 
