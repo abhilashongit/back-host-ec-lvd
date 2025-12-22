@@ -1,10 +1,16 @@
+import { useNavigate } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingIconsBackground from "@/components/FloatingIconsBackground";
 import { Card, CardContent } from "@/components/ui/card";
 import citeelEcPress from "@/assets/citeel-ec-press.webp";
-
 const News = () => {
+  const navigate = useNavigate();
+
+  const handleCardClick = () => {
+    navigate('/news/ec-citeel-partnership');
+  };
+
   return (
     <div className="min-h-screen bg-consulting-light relative overflow-hidden">
       <FloatingIconsBackground />
@@ -27,7 +33,10 @@ const News = () => {
         <div className="max-w-5xl mx-auto">
           <div className="grid gap-10">
             {/* Press Release Card 1 */}
-            <Card className="max-w-md overflow-hidden rounded-2xl border-0 shadow-premium bg-card transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-premium-lg cursor-pointer">
+            <Card 
+              onClick={handleCardClick}
+              className="max-w-md overflow-hidden rounded-2xl border-0 shadow-premium bg-card transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:scale-[1.02] hover:shadow-premium-lg cursor-pointer active:scale-[0.98]"
+            >
               <CardContent className="p-5">
                 <div className="relative aspect-[16/9] overflow-hidden rounded-xl">
                   <img 
