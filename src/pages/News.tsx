@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import FloatingIconsBackground from "@/components/FloatingIconsBackground";
 import { Card, CardContent } from "@/components/ui/card";
 import citeelEcPress from "@/assets/citeel-ec-press.webp";
+
 const News = () => {
   const navigate = useNavigate();
 
@@ -12,30 +12,48 @@ const News = () => {
   };
 
   return (
-    <div className="min-h-screen bg-consulting-light relative overflow-hidden">
-      <FloatingIconsBackground />
-      <Navigation />
+    <div className="min-h-screen bg-black relative overflow-hidden">
+      {/* Premium animated background */}
+      <div className="news-premium-bg">
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-zinc-950 to-black" />
+        
+        {/* Animated orbs */}
+        <div className="news-orb news-orb-1" />
+        <div className="news-orb news-orb-2" />
+        <div className="news-orb news-orb-3" />
+        
+        {/* Subtle flash effect */}
+        <div className="news-flash" />
+        
+        {/* Floating text blur elements */}
+        <div className="news-text-blur news-text-blur-1">NEWS</div>
+        <div className="news-text-blur news-text-blur-2">PRESS</div>
+        <div className="news-text-blur news-text-blur-3">2025</div>
+      </div>
+      
+      <Navigation darkMode />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="font-brand text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-consulting-dark mb-6 sm:mb-8 animate-elegant-fade-up">
+          <h1 className="font-brand text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 sm:mb-8 animate-elegant-fade-up news-gradient-text">
             NEWS & OFFICIAL RELEASES
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-consulting-medium max-w-3xl mx-auto leading-relaxed animate-elegant-fade-up animate-delay-200">
+          <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed animate-elegant-fade-up animate-delay-200 text-zinc-400">
             Stay updated with the latest press releases and announcements from Elevator Consulting.
           </p>
         </div>
       </section>
 
       {/* Press Releases */}
-      <section className="relative py-16 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-16 px-4 sm:px-6 lg:px-8 z-10">
         <div className="max-w-5xl mx-auto">
           <div className="grid gap-10">
             {/* Press Release Card 1 */}
             <Card 
               onClick={handleCardClick}
-              className="max-w-md overflow-hidden rounded-2xl border-0 shadow-premium bg-card transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:scale-[1.02] hover:shadow-premium-lg cursor-pointer active:scale-[0.98]"
+              className="max-w-md overflow-hidden rounded-2xl border border-zinc-800/50 shadow-2xl bg-zinc-900/80 backdrop-blur-sm transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:scale-[1.02] hover:shadow-[0_25px_50px_-12px_rgba(255,255,255,0.08)] hover:border-zinc-700/50 cursor-pointer active:scale-[0.98]"
             >
               <CardContent className="p-5">
                 <div className="relative aspect-[16/9] overflow-hidden rounded-xl">
@@ -46,11 +64,11 @@ const News = () => {
                   />
                 </div>
                 <div className="pt-5">
-                  <p className="text-xs text-consulting-medium mb-3 font-caption">22/12/2025</p>
-                  <h2 className="font-brand text-xl md:text-2xl font-bold text-consulting-dark mb-1">
+                  <p className="text-xs text-zinc-500 mb-3 font-caption">22/12/2025</p>
+                  <h2 className="font-brand text-xl md:text-2xl font-bold text-zinc-100 mb-1">
                     NAMASTE INDIA
                   </h2>
-                  <p className="font-caption text-base md:text-lg text-consulting-medium">
+                  <p className="font-caption text-base md:text-lg text-zinc-400">
                     Citeel X EC
                   </p>
                 </div>
