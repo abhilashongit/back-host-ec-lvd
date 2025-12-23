@@ -8,10 +8,7 @@ const Navigation = () => {
   const [showNav, setShowNav] = useState(false);
 
   const navItems = [
-    { label: "Home", href: "/" },
     { label: "How We're Different", href: "#differentiation" },
-    { label: "Pricing", href: "#pricing" },
-    { label: "FAQ", href: "#faq" },
     { label: "News", href: "/news" },
     { label: "Contact", href: "#contact" },
   ];
@@ -46,15 +43,15 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:block">
-            <div className="ml-6 lg:ml-10 flex items-baseline space-x-4 xl:space-x-8">
+            <div className="ml-10 lg:ml-16 flex items-baseline space-x-8 xl:space-x-12">
               {navItems.map((item, index) => (
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-consulting-medium hover:text-consulting-dark px-2 xl:px-3 py-2 text-sm lg:text-base font-medium transition-all duration-300 hover-glow animate-gentle-slide-in whitespace-nowrap"
+                  className="nav-link-shine text-consulting-medium hover:text-consulting-dark px-3 xl:px-4 py-2 text-sm lg:text-base font-medium transition-all duration-300 hover-glow animate-gentle-slide-in whitespace-nowrap relative overflow-hidden"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  {item.label}
+                  <span className="relative z-10">{item.label}</span>
                 </a>
               ))}
             </div>
