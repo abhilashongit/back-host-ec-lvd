@@ -91,8 +91,8 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden animate-elegant-fade-up absolute left-0 right-0 top-full">
-            <div className="px-3 pt-3 pb-5 space-y-2 bg-white/98 backdrop-blur-xl border-t border-consulting-subtle shadow-xl mx-2 sm:mx-4 rounded-b-2xl">
+          <div className="lg:hidden absolute left-0 right-0 top-full animate-[menuSlideDown_0.4s_cubic-bezier(0.16,1,0.3,1)_forwards]">
+            <div className="px-3 pt-3 pb-5 space-y-2 bg-white/95 backdrop-blur-2xl border-t border-consulting-subtle/50 shadow-2xl mx-2 sm:mx-4 rounded-b-2xl ring-1 ring-black/5">
               {navItems.map((item, index) => (
                 <a
                   key={item.label}
