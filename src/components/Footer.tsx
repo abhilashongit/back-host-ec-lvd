@@ -8,7 +8,7 @@ const Footer = () => {
         {/* Main Footer Content */}
         <div className="text-center mb-6 sm:mb-10 lg:mb-12">
           <h3 className="font-brand text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4">
-            Elevator Consulting
+            Elevator Consulting LLP
           </h3>
           <p className="text-white/80 mb-5 sm:mb-6 leading-relaxed max-w-3xl mx-auto text-sm sm:text-base lg:text-lg px-2">
             Helping legacy B2B companies transition to new-age processes, while cleaning up and optimising revenue operations and operational processes.
@@ -43,6 +43,12 @@ const Footer = () => {
           
           {/* Navigation Links */}
           <div className="flex items-center gap-4 sm:gap-6 text-xs sm:text-sm order-1 sm:order-2">
+            <a 
+              href="/news" 
+              className="text-white/70 hover:text-white transition-all duration-300 hover:scale-105"
+            >
+              Newsroom
+            </a>
             <a 
               href="#contact" 
               className="text-white/70 hover:text-white transition-all duration-300 hover:scale-105"
