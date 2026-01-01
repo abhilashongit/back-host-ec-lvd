@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import citeelEcPress from "@/assets/citeel-ec-press.webp";
+import s7Press from "@/assets/s7-press.jpg";
 
 const News = () => {
   const navigate = useNavigate();
@@ -60,8 +61,12 @@ const News = () => {
               className="max-w-md overflow-hidden rounded-2xl border border-zinc-800/50 shadow-2xl bg-zinc-900/80 backdrop-blur-sm transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:scale-[1.02] hover:shadow-[0_25px_50px_-12px_rgba(255,255,255,0.08)] hover:border-zinc-700/50 cursor-pointer active:scale-[0.98]"
             >
               <CardContent className="p-5">
-                <div className="relative aspect-[16/9] overflow-hidden rounded-xl bg-gradient-to-br from-zinc-800 to-zinc-900 flex items-center justify-center">
-                  <span className="font-brand text-4xl text-zinc-600">S7</span>
+                <div className="relative aspect-[16/9] overflow-hidden rounded-xl">
+                  <img 
+                    src={s7Press} 
+                    alt="S7 Scenario 7 Media and Promotions" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="pt-5">
                   <p className="text-xs text-zinc-500 mb-3 font-caption">01/01/2026</p>
