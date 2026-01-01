@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import s7Press from "@/assets/s7-press.jpg";
 
 const NewsArticleS7 = () => {
   const navigate = useNavigate();
@@ -30,6 +31,11 @@ const NewsArticleS7 = () => {
       <article className="relative pt-24 pb-20 px-4 sm:px-6 lg:px-8 z-10">
         <div className="max-w-3xl mx-auto">
           
+          {/* Hero Image */}
+          <div className="relative aspect-[16/9] overflow-hidden rounded-2xl mb-10 animate-article-image">
+            <img src={s7Press} alt="S7 Scenario 7 Media and Promotions" className="w-full h-full object-cover" />
+          </div>
+
           {/* Article Header */}
           <header className="mb-10 animate-article-header">
             <p className="text-xs text-zinc-500 mb-4 font-caption">01/01/2026</p>
