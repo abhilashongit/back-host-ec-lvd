@@ -1442,11 +1442,72 @@ All colors MUST be HSL.
   }
 }
 
+/* Golden animated border for new press releases */
+.news-card-golden-border {
+  position: relative;
+  border-radius: 1rem;
+  padding: 2px;
+  background: linear-gradient(90deg, 
+    rgba(212, 175, 55, 0.3) 0%, 
+    rgba(255, 215, 0, 0.6) 25%, 
+    rgba(212, 175, 55, 0.3) 50%,
+    rgba(255, 215, 0, 0.6) 75%,
+    rgba(212, 175, 55, 0.3) 100%
+  );
+  background-size: 200% 100%;
+  animation: golden-sheen 3s ease-in-out infinite;
+}
+
+.news-card-golden-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  padding: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.4) 50%, 
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: golden-sheen-highlight 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.news-card-golden-border > * {
+  border-radius: calc(1rem - 2px);
+}
+
+@keyframes golden-sheen {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes golden-sheen-highlight {
+  0% {
+    background-position: 200% 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    background-position: -200% 0;
+    opacity: 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .news-orb,
   .news-flash,
   .news-text-blur,
-  .news-gradient-text {
+  .news-gradient-text,
+  .news-card-golden-border,
+  .news-card-golden-border::before {
     animation: none;
   }
 }
