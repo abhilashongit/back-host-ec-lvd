@@ -66,7 +66,7 @@ const News = () => {
                     <img 
                       src={s7Press} 
                       alt="S7 Scenario 7 Media and Promotions" 
-                      className="w-full h-full object-contain bg-gradient-to-b from-zinc-800 to-zinc-900"
+                      className="w-full h-full object-cover object-left-top"
                     />
                   </div>
                   <div className="pt-5">
