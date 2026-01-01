@@ -33,7 +33,7 @@ const NewsArticleS7 = () => {
           
           {/* Hero Image */}
           <div className="relative aspect-[16/9] overflow-hidden rounded-2xl mb-10 animate-article-image">
-            <img src={s7Press} alt="S7 Scenario 7 Media and Promotions" className="w-full h-full object-cover" />
+            <img src={s7Press} alt="S7 Scenario 7 Media and Promotions" className="w-full h-full object-cover object-left-top" />
           </div>
 
           {/* Article Header */}
